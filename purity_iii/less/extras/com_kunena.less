@@ -17,19 +17,15 @@ body #Kunena {
 		color: @white!important;
 	}
 
+//BUTTON
+//--------------------------
 	input {
-		padding: 3px!important;
+		padding: 4px!important;
 		position: relative;
-		top: 1px;
 
 		&[type="checkbox"] {
 			position: relative;
 			top: 2px;
-		}
-
-		&[type="submit"] {
-			top:0px;
-			margin-left: @t3-global-margin/4!important;
 		}
 	}
 
@@ -38,6 +34,9 @@ body #Kunena {
 		color: @white;
 	}
 
+	.fltrt {
+		margin-top: 3px;
+	}
 
 	.kheader {
 		padding: @t3-global-margin/3 @t3-global-margin/2!important;
@@ -70,6 +69,7 @@ body #Kunena {
 		padding-top: 2px;
 		position: relative;
 		top: -1px;
+		margin-right: @t3-global-margin/4;
 	}
 
 //KWHO-TOTAL
@@ -163,7 +163,6 @@ body #Kunena {
 			}
 
 			.kbutton {
-				margin-left: @t3-global-padding/4!important;
 				padding: 4px!important;
 			}
 		}
@@ -205,8 +204,6 @@ body #Kunena {
 			input.kbutton {
 				margin: 0px!important;
 				padding: @t3-global-margin/4!important;
-				position: relative;
-				top: 0.5px;
 			}
 		}
 
@@ -224,6 +221,10 @@ body #Kunena {
 				color: lighten(@blue,15%)!important;
 			}
 		}
+	}
+
+	#kpost-buttons input.kbutton {
+		margin: 0 0 0 5px;
 	}
 
 //KADVSEARCH
@@ -245,16 +246,10 @@ body #Kunena {
 			}
 		}
 
-		input[type="text"] {
-			top: 0px;
-		}
-
-		input[type="submit"] {
-			top: 1px;
-		}
-
 		#limit {
 			margin: 0px;
+			padding-top: 4px!important;
+			width: 175px;
 		}
 
 		#categorylist {
@@ -265,6 +260,13 @@ body #Kunena {
 			display: inline;
 			margin-right: @t3-global-margin/4;
 		}
+	}
+
+//KTOPICS
+//---------------------------
+	#kflattable input[type="submit"],
+	#kannouncement_body input[type="submit"] {
+		top: 1px;
 	}
 
 //KLIST-BOTTOM
