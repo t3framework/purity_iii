@@ -1,0 +1,162 @@
+.com_mijoshop {
+
+  // General
+  table.form td {
+    border-top: 0;
+  }
+
+  .buttons {
+    padding: @t3-global-padding/2 @t3-global-padding;
+  }
+
+  // Header 
+  #header_oc {
+    .links {
+      top: 35px;
+    }
+
+    #search_oc {
+      top: 5px;
+      width: 125px;
+
+      input {
+        height: 25px;
+      }
+    }
+
+    #currency {
+      font-size: 15px;
+      font-weight: bold;
+      top: 8px;
+
+      a {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+
+    .mini-cart-info td,
+    .mini-cart-total td {
+      border-top: 0;
+    }
+  }
+
+  // Product filter
+  .product-filter {
+    padding-bottom: 15px;
+
+    .limit select,
+    .sort select {
+      display: inline-block;
+      padding: 2px;
+      height: 25px;
+      line-height: 25px;
+    }
+
+  }
+
+  // Grid
+  .product-grid {
+    .clearfix();
+    width: auto;
+    margin: 0 -10px -20px;
+
+    > div {
+      float: left;
+      width: 25%;
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      > div {
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    > div:nth-child(4n + 1) {
+      clear: both;
+    }
+  }
+
+  .box_oc .box-content {
+    padding: 20px;
+  }
+
+  // Product Info
+  .product-info {
+    > .left {
+      width: 30% !important;
+    }
+
+    > .right {
+      width: 70% !important;
+      border-bottom: 1px solid #E7E7E7;
+      border-right: 1px solid #E7E7E7;
+      min-height: 352px;
+    }
+
+    .description,
+    .price,
+    .cart,
+    .review {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .review {
+      border: 0;
+
+      div {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .share {
+        border-bottom: 0;
+      }
+    }
+
+    .cart div {
+      input[type="text"],
+      input[type="button"] {
+        display: inline-block;
+      }
+
+      input[type="text"] {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  .tab-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  // Footer 
+  #footer_oc {
+    border: 1px solid #DBDEE1;
+    border-radius: 7px;
+
+    h3 {
+      font-weight: bold;
+      margin-bottom: @t3-global-margin;
+      font-size: @font-size-h4;
+    }
+  }
+
+  // Modules
+  .box-category {
+    padding-left: @t3-global-padding;
+  }
+
+  .box-product .image {
+    margin-bottom: @t3-global-margin/2;
+  }
+}

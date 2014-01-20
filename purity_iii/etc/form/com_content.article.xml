@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="attribs">
+        <fieldset name="extra-options" label="Extra Options" description="Extra Options for Purity III">
+            <field name="extra-class" type="text" default="" label="Extra Class" description="Extra Class for the article" />
+        </fieldset>
+    </fields>
+</form>

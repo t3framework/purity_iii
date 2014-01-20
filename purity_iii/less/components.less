@@ -1,0 +1,599 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+ 
+
+// --------------------------------------------------
+// BOOTSTRAP COMPONENTS STYLES
+// --------------------------------------------------
+
+//
+// TITLES
+// --------------------------------------------------
+
+// Page header
+// -----------
+.page-header {
+  padding-bottom: @t3-global-padding;
+  margin: 0 0 @t3-global-margin;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+.page-title,
+.page-header h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+
+// Page Subheader
+// --------------
+.page-subheader {
+  border-bottom: 1px solid @t3-border-color;
+  margin: 0 0 @t3-global-margin;
+  padding-bottom: @t3-global-padding;
+  .clearfix();
+}
+
+.page-subtitle,
+.page-subheader h2 {
+  line-height: 1;
+  margin: 0;
+}
+
+.page-header + .page-subheader {
+  margin-top: -@line-height-computed; //If there is page header, then omit the space before page subheader
+}
+
+
+// Article Header
+// --------------
+.article-title,
+.article-header {
+  h1, h2 {
+    a {
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.article-title,
+.article-header h1, {
+  margin: 0 0 @line-height-computed 0;
+}
+
+// Smaller "Article Title" in Blog and List layout
+h2.article-title,
+.article-header h2 {
+}
+
+
+// Item Header
+// -----------
+.item-title {
+  font-weight: bold;
+}
+
+
+
+//
+// MASHEAD & JUMBOTRON
+// --------------------------------------------------
+
+// Jumbotron (jumbotron.less)
+// --------------------------
+.jumbotron {
+
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+
+  p {
+    // Remove margin on last paragraph
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .container & {
+    border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  @media screen and (min-width: @grid-float-breakpoint) {
+    .container & {
+    }
+    h1 {
+    }
+  }
+
+}
+
+
+// Jumbotron Primary (jumbotron.less)
+// --------------------------
+.jumbotron-primary {
+  background-color: @brand-primary;
+  color: lighten(@brand-primary, 50%);
+  h1, h2, h3 {
+    color: @white;
+  }
+  p {
+    color: @white;
+  }
+  .btn-primary {
+    border-color: #fff;
+  }
+}
+
+
+// Page Mashead
+// --------
+.page-masthead {
+  .clearfix();
+}
+
+
+// Mashead
+// --------
+.masthead {
+  padding: (@t3-global-padding * 2) 0;
+  text-align: center;
+
+  p {
+    // Remove margin on last paragraph
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: @grid-float-breakpoint) {
+    padding: (@t3-global-padding * 4) 0;
+
+    h1 {
+      font-size: @font-size-h1 * 3;
+    }
+
+    p {
+      font-size: @font-size-base * 2;
+    }
+
+    // Bigger mashead btn
+    .btn-lg {
+      margin-top: @line-height-computed;
+      padding: 18px 42px;
+      font-size: @font-size-base * 1.5;
+    }
+  }
+
+}
+
+
+
+//
+// LABELS & BADGES
+// --------------------------------------------------
+
+// Labels (labels.less)
+// --------------------
+
+.label {
+
+  // Add hover effects, but only for links
+  &[href] {
+    &:hover,
+    &:focus {
+    }
+  }
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+}
+
+.label-primary {
+}
+
+.label-success {
+}
+
+.label-info {
+}
+
+.label-warning {
+}
+
+.label-danger {
+}
+
+
+// Badges (badges.less)
+// --------------------
+
+// Base classes
+.badge {
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+}
+
+// Hover state, but only for links
+a.badge {
+  &:hover,
+  &:focus {
+  }
+}
+
+// Quick fix for labels/badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// Quick fix for labels/badges in page-header- NNTH
+.page-header {
+  .label, .badge {
+    vertical-align: middle;
+  }
+}
+
+
+
+//
+// THUMBNAILS  (thumbnails.less)
+// --------------------------------------------------
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  > img {
+  }
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+}
+
+// Image captions
+.thumbnail .caption {
+}
+
+
+
+//
+// ALERTS (alerts.less)
+// --------------------------------------------------
+
+// Base styles
+// -------------------------
+.alert {
+
+  // Headings for larger alerts
+  h4 {
+    color: inherit;
+  }
+
+  // Provide class for links that match alerts
+  .alert-link {
+  }
+
+}
+
+
+// Dismissable alerts
+// ------------------
+.alert-dismissable {
+}
+
+
+// Alternate styles
+// ---------------
+.alert-success {
+}
+
+.alert-info {
+}
+
+.alert-warning {
+}
+
+.alert-danger {
+}
+
+
+
+//
+// MEDIA OBJECTS (media.less)
+// Source: http://stubbornella.org/content/?p=497
+// --------------------------------------------------
+
+// Common styles
+// -------------------------
+.media,
+.media .media {
+}
+
+.media:first-child {
+  margin-top: 0;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-heading {
+  margin: 0 0 5px;
+}
+
+
+// Media image alignment
+// -------------------------
+.media {
+  > .pull-left {
+    margin-right: 10px;
+  }
+  > .pull-right {
+    margin-left: 10px;
+  }
+}
+
+
+// Media list variation
+// -------------------------
+.media-list {
+}
+
+
+
+//
+// LIST GROUP (list-groups.less)
+// --------------------------------------------------
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+.list-group {
+  // No need to set list-style: none; since .list-group-item is block level
+}
+
+
+// Individual list items
+// -------------------------
+.list-group-item {
+
+  // first and last items
+  &:first-child {
+  }
+  &:last-child {
+  }
+
+  // Align badges within list items
+  > .badge {
+    float: right;
+  }
+  > .badge + .badge {
+    margin-right: 5px;
+  }
+}
+
+// Linked list items
+a.list-group-item {
+
+  .list-group-item-heading {
+  }
+
+  // Hover state
+  &:hover,
+  &:focus {
+  }
+
+  // Active class on item itself, not parent
+  &.active,
+  &.active:hover,
+  &.active:focus {
+
+    // Force color to inherit for custom content
+    .list-group-item-heading {
+      color: inherit;
+    }
+    .list-group-item-text {
+      color: lighten(@list-group-active-bg, 40%);
+    }
+  }
+}
+
+// Custom content options
+// -------------------------
+.list-group-item-heading {
+}
+
+.list-group-item-text {
+}
+
+
+
+//
+// PANELS (panels.less)
+// --------------------------------------------------
+// Base class
+.panel {
+}
+
+// Panel contents
+.panel-body {
+}
+
+
+// Optional heading
+.panel-heading {
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of it's default margins for spacing.
+.panel-title {
+  > a {
+    color: inherit;
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+}
+
+
+// Collapsable panels (aka, accordion)
+.panel-group {
+
+  .panel {
+    + .panel {
+    }
+  }
+
+  .panel-heading {
+    + .panel-collapse .panel-body {
+    }
+  }
+
+  .panel-footer {
+    + .panel-collapse .panel-body {
+    }
+  }
+
+}
+
+
+// Contextual variations
+.panel-default {
+}
+
+.panel-primary {
+}
+
+.panel-success {
+}
+
+.panel-warning {
+}
+
+.panel-danger {
+}
+
+.panel-info {
+}
+
+
+
+//
+// WELLS (wells.less)
+// --------------------------------------------------
+// Base class
+.well {
+  blockquote {
+  }
+}
+
+// Sizes
+.well-lg {
+}
+
+.well-sm {
+}
+
+
+
+//
+// MODALS (modals.less)
+// --------------------------------------------------
+// Container that the modal scrolls within
+.modal {
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+}
+
+// Actual modal
+.modal-content {
+}
+
+// Modal background
+.modal-backdrop {
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(.5); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  border-bottom: 0;
+  padding: 20px 40px 0;
+}
+// Close icon
+.modal-header .close {
+}
+
+// Title text within header
+.modal-title {
+  font-size: @font-size-h2;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  padding: 10px 40px 20px;
+}
+
+// Footer (for actions)
+.modal-footer {
+}
+
+// Scale up the modal
+@media screen and (min-width: @screen-sm-min) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+  }
+}
+
+
+
+//
+// TOOLTIPS (tooltips.less)
+// --------------------------------------------------
+
+// Base class
+.tooltip {
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+}
+
+// Arrows
+.tooltip-arrow {
+}

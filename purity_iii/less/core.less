@@ -1,0 +1,193 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// --------------------------------------------------
+// CORE ELEMENTS
+// --------------------------------------------------
+
+//
+// SCAFFOLDING (scaffolding.less)
+// --------------------------------------------------
+
+html {
+}
+
+body {
+  padding-top: @navbar-height;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+// Links
+// --------------------------------------------------
+a {
+  color: @link-color;
+  text-decoration: none;
+  .transition(all .2s);
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+
+// Images
+// --------------------------------------------------
+img {
+  vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+}
+
+// Rounded corners
+.img-rounded {
+}
+
+// Image thumbnails
+.img-thumbnail {
+}
+
+// Perfect circle
+.img-circle {
+}
+
+
+
+//
+// TABLES (tables.less)
+// -------------------------------------------------------
+table {
+}
+
+// All Cells
+// ---------
+th,
+td {
+  line-height: @line-height-base;
+  text-align: left;
+  vertical-align: top;
+} 
+
+// Heading
+// -------
+th {
+  font-weight: bold;
+  // Links in Table Heading
+  a {
+    // Link states
+    &:hover, &:focus, &:active {
+    }
+  }
+}
+
+// Base Cells
+// ----------
+td,
+tr td {
+  border-top: 1px solid @table-border-color;
+}
+
+
+
+// Specific Joomla! Table Styles
+// -----------------------------
+.cat-list-row0,
+.cat-list-row1,
+tr.cat-list-row0 td,
+tr.cat-list-row1 td {
+}
+
+.cat-list-row0:hover,
+.cat-list-row1:hover {
+  background: @table-bg-hover;
+}
+
+.cat-list-row1,
+tr.cat-list-row1 td {
+  background: @table-bg-accent;
+}
+
+table.contentpane,
+table.tablelist,
+table.category,
+table.admintable,
+table.blog {
+  width: 100%;
+}
+
+table.contentpaneopen {
+  border: 0;
+}
+
+
+
+// 
+// MISC
+// --------------------------------------------------
+.star {
+  color: @yellow;
+}
+
+.red {
+  color: @red;
+}
+
+// Horizontal rules
+hr {
+  margin-top:    @line-height-computed;
+  margin-bottom: @line-height-computed;
+  border: 0;
+  border-top: 1px solid @hr-border;
+}
+
+// Wrap Element
+.wrap {
+  width: auto;
+  clear: both;
+}
+
+// Center
+.center,
+.table td.center,
+.table th.center {
+  text-align: center;
+}
+
+// Hidden elements
+.element-invisible {
+ position: absolute;
+ padding: 0;
+ margin: 0;
+ border: 0;
+ height: 1px;
+ width: 1px;
+ overflow: hidden;
+}

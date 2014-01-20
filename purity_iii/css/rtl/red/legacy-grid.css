@@ -1,0 +1,198 @@
+
+
+.row-fluid {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row-fluid:before,
+.row-fluid:after {
+  content: " ";
+  display: table;
+}
+.row-fluid:after {
+  clear: both;
+}
+[class*="span"] {
+  float: right;
+}
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.span12 {
+  width: 100%;
+}
+.span11 {
+  width: 91.66666666666666%;
+}
+.span10 {
+  width: 83.33333333333334%;
+}
+.span9 {
+  width: 75%;
+}
+.span8 {
+  width: 66.66666666666666%;
+}
+.span7 {
+  width: 58.33333333333334%;
+}
+.span6 {
+  width: 50%;
+}
+.span5 {
+  width: 41.66666666666667%;
+}
+.span4 {
+  width: 33.33333333333333%;
+}
+.span3 {
+  width: 25%;
+}
+.span2 {
+  width: 16.66666666666666%;
+}
+.span1 {
+  width: 8.333333333333332%;
+}
+.offset12 {
+  margin-right: 100%;
+}
+.offset11 {
+  margin-right: 91.66666666666666%;
+}
+.offset10 {
+  margin-right: 83.33333333333334%;
+}
+.offset9 {
+  margin-right: 75%;
+}
+.offset8 {
+  margin-right: 66.66666666666666%;
+}
+.offset7 {
+  margin-right: 58.33333333333334%;
+}
+.offset6 {
+  margin-right: 50%;
+}
+.offset5 {
+  margin-right: 41.66666666666667%;
+}
+.offset4 {
+  margin-right: 33.33333333333333%;
+}
+.offset3 {
+  margin-right: 25%;
+}
+.offset2 {
+  margin-right: 16.66666666666666%;
+}
+.offset1 {
+  margin-right: 8.333333333333332%;
+}
+.offset0 {
+  margin-right: 0%;
+}
+.visible-phone {
+  display: none !important;
+}
+.visible-tablet {
+  display: none !important;
+}
+.hidden-desktop {
+  display: none !important;
+}
+.visible-desktop {
+  display: inherit !important;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important ;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
+.width-10 {
+  width: 10px;
+}
+.width-20 {
+  width: 20px;
+}
+.width-30 {
+  width: 30px;
+}
+.width-40 {
+  width: 40px;
+}
+.width-50 {
+  width: 50px;
+}
+.width-60 {
+  width: 60px;
+}
+.width-70 {
+  width: 70px;
+}
+.width-80 {
+  width: 80px;
+}
+.width-90 {
+  width: 90px;
+}
+.width-100 {
+  width: 100px;
+}
+.height-10 {
+  height: 10px;
+}
+.height-20 {
+  height: 20px;
+}
+.height-30 {
+  height: 30px;
+}
+.height-40 {
+  height: 40px;
+}
+.height-50 {
+  height: 50px;
+}
+.height-60 {
+  height: 60px;
+}
+.height-70 {
+  height: 70px;
+}
+.height-80 {
+  height: 80px;
+}
+.height-90 {
+  height: 90px;
+}
+.height-100 {
+  height: 100px;
+}

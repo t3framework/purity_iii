@@ -1,0 +1,76 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ---------------------------------------------------------
+// FEATURES INTRO LAYOUT
+// ---------------------------------------------------------
+.features-intro {
+
+  // Heading
+  h1 {
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: floor(@font-size-base * 1.5);
+    // Bigger font size on Tablet / Desktop
+    @media screen and (min-width: @screen-sm) {
+      font-size: floor(@font-size-base * 2.15);
+    }
+  }
+
+  // Jumbotron
+  .jumbotron {
+    background: transparent;
+    position: relative;
+    margin-top: @t3-global-margin;
+    margin-bottom: @t3-global-margin;
+    padding: 0;
+    text-align: center;
+    // Bigger margin on Tablet / Desktop
+    @media screen and (min-width: @screen-sm) {
+      margin-top: @t3-global-margin * 3;
+      margin-bottom: @t3-global-margin * 3;
+    }
+
+    h2 {
+      font-size: @font-size-base * 3;
+      margin-top: 0;
+      margin-bottom: @t3-global-margin / 2;
+    }
+
+    p {
+      font-site: @font-size-base;
+      color: @gray-light;
+    }
+  }
+
+  .t3-mainbody {
+    overflow: hidden;
+  }
+
+
+  // Thumbnail
+  .thumbnails {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+  }
+
+}

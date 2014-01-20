@@ -1,0 +1,270 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ---------------------------------------------------------
+// MAGAZINE LAYOUT
+// ---------------------------------------------------------
+
+// Clearfix
+// ----------------------------
+.magazine-item,
+.magazine-featured-leading,
+.magazine-featured-intro,
+.magazine-category {
+  .clearfix();
+}
+
+
+//
+// Generic Magazine Elements
+// --------------------------------------------------------
+
+// Category Title
+// ----------------------------
+.magazine-category-title {
+  margin-bottom: @t3-global-margin;
+  font-size: @font-size-large;
+  background: @gray-lighter;
+  padding: (@t3-global-padding / 2);
+  strong {
+    font-weight: 600;
+  }
+  .fa {
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+    left: 2px;
+  }
+  > a {
+    display: inline-block;
+    color: @text-color;
+    text-transform: uppercase;
+    // Link states
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      color: @brand-primary;
+    }
+  }
+}
+
+
+// Titles
+// ----------------------------
+.magazine-item .page-header {
+  padding-bottom: 0;
+  margin-bottom: 5px;
+  border-bottom: 0;
+  h2 {
+    margin: 0;
+    font-size: @font-size-large;
+    line-height: 1.275;
+    font-weight: 600;
+    a {
+
+      // Link states
+      &:hover, &:active, &:focus {
+
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// Images
+// ----------------------------
+.magazine-item {
+  .item-image {
+    overflow: hidden;
+  }
+  .item-image,
+  .pull-left.item-image,
+  .pull-right.item-image {
+    width: 100%;
+    max-width: 100%;
+    float: none !important;
+    margin-bottom: @t3-global-margin;
+  }
+  .item-image img,
+  .pull-left.item-image img,
+  .pull-right.item-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+// Metadata
+// ----------------------------
+.magazine-item .article-aside {
+  margin-top: @t3-global-margin / 2;
+  margin-bottom: @t3-global-margin / 2;
+}
+
+.magazine-item .article-info {
+  color: @gray-light;
+  margin: 0;
+  width: 100%;
+}
+
+
+// Content
+// ----------------------------
+.magazine-item-ct {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// Leading Items
+// ----------------------------
+.magazine-leading {
+  margin-bottom: @t3-global-margin;
+  .magazine-item {
+    // Titles
+    .page-header h2 {
+      font-size: @font-size-h1;
+    }
+    // Images
+    .item-image {
+      margin-bottom: @t3-global-margin / 2;
+      max-height: @line-height-computed * 15;
+    }
+    // Intro Text
+    .magazine-item-ct {
+      font-size: @t3-font-size-bigger;
+    }
+  }
+}
+
+
+// Intro Items
+// ----------------------------
+.magazine-intro {
+  .magazine-item {
+    // Images
+    .item-image {
+      max-height: @line-height-computed * 6;
+      // Hide image caption
+      p.img_caption {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+//
+// Magazine Featured
+// --------------------------------------------------------
+.magazine-featured {
+  margin-bottom: @t3-global-margin * 2;
+}
+
+
+// Featured Leading Items
+// ----------------------------
+.magazine-featured-leading {
+  .magazine-item {
+  }
+}
+
+
+// Featured Intro Items
+// ----------------------------
+.magazine-featured-intro {
+  clear: both;
+  .magazine-item {
+    display: block;
+    float: left;
+    margin-top: @t3-global-margin;
+    overflow: hidden;
+  }
+}
+
+
+// Featured Intro Links
+// ----------------------------
+.magazine-featured-links {
+  margin-bottom: @t3-global-margin;
+  &::before {
+    display: inline-block;
+    content: "MORE NEWS";
+    background: @gray-dark;
+    font-weight: normal;
+    padding: 5px 10px;
+    color: #fff;
+  }
+  .link-item {
+    border-bottom: 1px solid @t3-border-color;
+    padding: (@t3-global-padding / 2) 0;
+  }
+  .page-header {
+    margin: 0;
+    h2 {
+      font-size: @t3-font-size-bigger;
+    }
+  }
+}
+
+
+
+//
+// Magazine Category
+// --------------------------------------------------------
+.magazine-category {
+  margin-bottom: @t3-global-margin * 2;
+
+  // Row
+  .row-articles {
+    margin-bottom: @t3-global-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // Remove Padding on Desktop
+    @media screen and (min-width: @screen-md) {
+      .magazine-item-media {
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  // Leading
+  .magazine-leading {
+    margin-bottom: @t3-global-margin * 2;
+  }
+
+  // Images
+  .magazine-item {
+    .item-image {
+      margin-top: 5px;
+    }
+  }
+
+  // Text Intro
+  .magazine-item-ct {
+    color: @gray;
+    font-size: @font-size-small;
+  }
+}
+

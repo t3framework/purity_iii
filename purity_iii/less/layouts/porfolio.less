@@ -1,0 +1,97 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ---------------------------------------------------------
+// PORFOLIO LAYOUT
+// ---------------------------------------------------------
+
+// Page header
+// ---------------------
+.porfolio .page-header {
+  text-align: center;
+  border-bottom: 0;
+  margin-top: @t3-global-margin / 2;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+
+// Porfolio Items
+// ---------------------
+.porfolio-items {
+  margin-top: @t3-global-margin;
+  padding-top: @t3-global-padding;
+  border-top: 1px solid @t3-border-color;
+  text-align: center;
+
+  .thumbnail {
+    border: 0;
+    padding: 0;
+    margin: @t3-global-margin 0;
+  }
+
+  // Link
+  .thumbnail > a {
+    color: @text-color;
+    text-decoration: none;
+    // Links states
+    &:hover, &:active, &:focus {
+      color: @link-color;
+      text-decoration: none;
+    }
+  }
+
+  // Image
+  .item-image {
+    float: none !important;
+    border: 1px solid @t3-border-color;
+    padding: 3px;
+    .transition(border-color 0.2s ease-in);
+    img {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .thumbnail > a {
+    &:hover, &:active, &:focus {
+      .item-image {
+        border-color: darken(@t3-border-color, 20%);
+      }
+      .item-image img {
+        opacity: .7;
+      }
+    }
+  }
+
+  // Title
+  h3 {
+    margin-top: @t3-global-margin;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: @font-size-large;
+  }
+
+  // Intro 
+  p {
+    color: @gray;
+    margin: 0;
+  }
+
+}

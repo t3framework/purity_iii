@@ -1,0 +1,4 @@
+*.ffs_*
+.svn
+.DS_Store
+.idea

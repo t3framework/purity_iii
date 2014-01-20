@@ -1,0 +1,1258 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// ---------------------------------------------------------
+// GENERIC ARTICLE STYLES
+// ---------------------------------------------------------
+
+//
+// Articles Layout
+// --------------------------------------------------------
+.blog {
+}
+
+.item-page {
+  margin-bottom: @t3-global-margin * 2;
+}
+
+// Home Blog
+.blog-featured {
+}
+
+// Leading Article Rows
+.items-leading {
+}
+
+.items-leading .leading {
+  margin-bottom: @t3-global-margin * 2;
+}
+
+// Article Rows
+.items-row {
+}
+
+.items-row .item {
+  margin-bottom: @t3-global-margin * 2;
+}
+
+// Divider
+.divider-vertical {
+  margin: @t3-global-margin 0 (@t3-global-margin * 2);
+  border: 0;
+  border-top: 1px solid @hr-border;
+}
+
+
+// Article Aside
+// -------------------------
+.article-aside {
+  color: @gray-light;
+  font-size: @t3-font-size-smaller;
+  margin-bottom: @t3-global-margin;
+  padding: 0;
+}
+
+.article-header + .article-aside {
+  margin-top: -(@t3-global-margin / 2); // If there is an Article Header, minus the gap
+}
+
+.article-info {
+  margin: 0;
+  width: 85%;
+  font-size: @t3-font-size-smaller;
+
+  a {
+    // Link states
+    &:hover, &:focus, &:active {
+    }
+  }
+  
+  .article-info-term {
+    display: none;
+  }
+  
+  dd {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    strong {
+      font-weight: 600;
+    }
+    .fa {
+      margin-right: 5px;
+    }
+  }
+
+}
+
+// Author
+.createdby {
+}
+
+// Category Name
+.category-name {
+  .fa {
+    display: none;
+  }
+  a {
+    background: @brand-primary;
+    color: @gray-lighter;
+    padding: 2px 5px;
+    // Link states
+    &:hover, &:focus, &:active {
+      background: darken(@brand-primary,5%);
+      text-decoration: none;
+    }
+  }
+}
+
+// URL
+.article-url {
+}
+
+// Publish Date
+.published {
+}
+
+// Modified Date
+.modifydate {
+}
+
+// Article Desciption
+.contentdescription {
+}
+
+.contentdescription p {
+}
+
+
+// Article Footer
+// -------------------------
+.article-footer {
+  color: @gray-light;
+  font-size: @font-size-small;
+  margin-bottom: @t3-global-margin;
+}
+
+
+// Article Images
+// -------------------------
+
+article,
+.article-intro {
+
+  // Make the image reponsive.
+  // Remove if you don't want article images to be responsived.
+  img {
+    .img-responsive();
+  }
+
+  // Add proper margin
+  img[align=left],
+  .img-fulltext-left,
+  .img-intro-left,
+  .img_caption.left,
+  .pull-left.item-image {
+    margin-right: @t3-global-margin;
+  }
+
+  img[align=right],
+  .img-fulltext-right,
+  .img_caption.right,
+  .img-intro-right,
+  .pull-right.item-image {
+    margin-left: @t3-global-margin;
+  }
+
+}
+
+.img-intro-none,
+.img-intro-left,
+.img-intro-right,
+.img-fulltext-none,
+.img-fulltext-left,
+.img-fulltext-right,
+.img_caption {
+  position: relative;
+  margin-bottom: @t3-global-margin;
+  max-width: 100%;
+}
+
+.img-fulltext-left {
+  float: left;
+}
+
+.img-fulltext-right {
+  float: right;
+}
+
+// Image caption
+.img_caption {
+  > img {
+    margin-bottom: 1px !important;
+  }
+  p.img_caption {
+    background: @gray-lighter;
+    color: @gray;
+    font-size: @font-size-small;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    clear: both;
+  }
+}
+
+// Reponsive Article Images on Mobile
+@media screen and (max-width: @screen-xs-max) {
+  article,
+  .article-intro {
+    img, .img_caption,
+    .article-image-full,
+    .article-image-intro,
+    .img-intro-none,
+    .img-intro-left,
+    .img-intro-right,
+    .img-fulltext-none,
+    .img-fulltext-left,
+    .img-fulltext-right, {
+      float: none !important;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100% !important;
+    }
+  }
+}
+
+
+// Article Tags
+// -------------------------
+.item-page .tags {
+  border-top: 1px solid @gray-lighter;
+  padding: (@t3-global-padding / 2) 0;
+
+  a {
+    background: @white;
+    border: 1px solid @gray-lighter;
+    border-radius: 3px;
+    color: @gray;
+    padding: 5px;
+
+    // Hover states
+    &:hover, &:focus, &:active {
+      background: @gray-light;
+      border-color: @gray-light;
+      color: @link-color-hover;
+    }
+  }
+}
+
+
+// Article Actions
+// -------------------------
+article aside .btn-group {
+  .dropdown-menu {
+  }
+  
+  > .dropdown-toggle,
+  > .dropdown-toggle:hover,
+  > .dropdown-toggle:active,
+  > .dropdown-toggle:focus {
+    padding: 2px 5px;
+  }
+
+  > .dropdown-toggle .caret {
+    margin-left: 2px;
+  }
+
+}
+
+
+
+
+// ---------------------------------------------------------
+// ROW LISTS
+// ---------------------------------------------------------
+// List types using in Joomla! Core
+
+// Alternating Rows
+.row-even,
+.row-odd {
+  padding: 5px;
+  width: 99%;
+  border-bottom: 1px solid @table-border-color;
+}
+
+.row-odd {
+  background-color: @table-bg;
+}
+
+.row-even {
+  background-color: @table-bg-accent;
+}
+
+.blog-row-rule,
+.blog-item-rule {
+  border: 0;
+}
+
+// Row reveal
+.row-fluid .row-reveal {
+  visibility: hidden;
+}
+
+.row-fluid:hover .row-reveal {
+  visibility: visible;
+}
+
+// Nav List Offset
+.nav-list > li.offset > a {
+  padding-left: 30px;
+  font-size: 12px;
+}
+
+
+// Striped
+// -------
+.list-striped,
+.row-striped {
+  list-style: none;
+  line-height: @line-height-computed;
+  text-align: left;
+  vertical-align: middle;
+  border-top: 1px solid @table-border-color;
+  margin-left: 0;
+}
+
+.list-striped li,
+.list-striped dd,
+.row-striped .row,
+.row-striped .row-fluid {
+  border-bottom: 1px solid @table-border-color;
+  padding: 10px 15px;
+}
+
+.list-striped li:nth-child(odd),
+.list-striped dd:nth-child(odd),
+.row-striped .row:nth-child(odd),
+.row-striped .row-fluid:nth-child(odd) {
+  background-color: @table-bg-accent;
+}
+
+.list-striped li:hover,
+.list-striped dd:hover,
+.row-striped .row:hover,
+.row-striped .row-fluid:hover {
+  background-color: @table-bg-hover;
+}
+
+.row-striped .row-fluid {
+  width: 97%; // lower than 100% since we have padding
+}
+
+.row-striped .row-fluid [class*="span"] {
+  min-height: 10px;
+}
+
+.row-striped .row-fluid [class*="span"] {
+  margin-left: 8px;
+}
+
+.row-striped .row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+
+// Condensed
+// ---------
+.list-condensed {
+  li {
+    padding: 5px 10px;
+  }
+}
+
+.row-condensed {
+  .row, .row-fluid {
+    padding: 5px 10px;
+  }
+}
+
+
+// Bordered
+// --------
+.list-bordered,
+.row-bordered {
+  list-style: none;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: middle;
+  margin-left: 0;
+  border: 1px solid @table-border-color;
+}
+
+
+
+// ---------------------------------------------------------
+// COMMON JOOMLA STYLES
+// ---------------------------------------------------------
+
+//
+// LOGIN
+// ---------------------------------------------------------
+.login-wrap{
+
+  // Header
+  .page-headder {
+  }
+
+  // Description
+  .login-description {
+
+  }
+
+  // Login Form
+  form {
+
+    fieldset {
+    }
+
+    label {
+    }
+
+    .form-group {
+    }
+
+  }
+
+  // Links
+  .other-links {
+    ul {
+      padding-left: @grid-gutter-width / 2;
+    }
+  }
+
+}
+
+
+
+//
+// REGISTER
+// ---------------------------------------------------------
+.form-register {
+
+  fieldset {
+    padding: 0 0 10px;
+  }
+
+  p {
+    margin: 0 0 5px;
+  }
+
+  p.form-des {
+    margin: 15px 0;
+  }
+
+  label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    width: 130px;
+  }
+
+  .input,
+  .inputbox {
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  .btn,
+  .button {
+    margin-left: 140px;
+  }
+
+}
+
+.registration fieldset dt {
+  margin-right: 5px;
+}
+
+.admintable textarea {
+  max-width: 90% !important;
+  resize: none;
+}
+
+
+
+//
+// MAILTO WINDOWS
+// ---------------------------------------------------------
+.com_mailto {
+  body {
+    padding: @t3-global-padding / 2;
+  }
+
+  .t3-mainbody {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .t3-content {
+    width: auto;
+  }
+}
+
+#mailto-window {
+  background: #fff;
+  margin: 10px 0 20px;
+  padding: 0;
+  position: relative;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .mailto-close {
+    a {
+      :hover {
+
+      }
+    }
+  }
+}
+
+#mailtoForm {
+  .formelm {
+    padding: 5px 0;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  
+  .formelm label {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 100px;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  
+  .input,
+  .inputbox {
+    width: 65%;
+  }
+  
+  .btn,
+  .button,
+  button {
+    margin-right: 5px;
+  }
+}
+
+
+
+//
+// USERS
+// ---------------------------------------------------------
+.user-details {
+  padding: 10px 0;
+
+  p {
+    margin: 0 0 5px;
+  }
+  
+  label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    width: 130px;
+  }
+  
+  .input,
+  .inputbox {
+    margin-left: 10px;
+    width: 200px;
+  }
+  
+  .btn,
+  button {
+    margin-left: 140px;
+  }
+  
+  .paramlist {
+    .paramlist_key {
+      padding: 0 0 5px;
+      width: 130px;
+    }
+    
+    .paramlist_value {
+      padding: 0 0 5px;
+    }
+  }
+  
+  .user_name span {
+    font-weight: bold;
+    padding-left: 10px;
+  }
+}
+
+
+// Reset & Remind
+// --------------
+.reset .form-validate p,
+.remind .form-validate p {
+  background: @gray-lighter;
+  border: 1px solid @t3-border-color;
+  margin-bottom: @t3-global-margin;
+  padding: (@t3-global-padding / 2) @t3-global-padding;
+  border-radius: @border-radius-base;
+}
+
+.reset .form-validate fieldset dl,
+.remind .form-validate fieldset dl {
+  margin: 0;
+}
+
+.reset .form-validate fieldset dt,
+.remind .form-validate fieldset dt {
+  margin: 4px 0 0 0;
+}
+
+
+// Profile
+//---------
+.profile .dl-horizontal {
+  dd {
+  }
+  
+  dt {
+  }
+}
+
+
+// Edit Profile
+// ------------
+.profile-edit {
+  input {
+    .make-sm-column(6, @padding-base-horizontal);  // Make the input have the same width
+  }
+  select {
+    .make-sm-column(6, @padding-base-horizontal);  // Make the select have the same width
+  }
+  select + button {
+    margin-left: 5px;
+  }
+}
+
+
+//
+// SEARCH
+// ---------------------------------------------------------
+.search {
+}
+
+.searchintro {
+}
+
+
+// Search Form
+// -----------
+#searchForm {
+  .clearfix();
+
+  fieldset {
+    margin: @t3-global-margin 0;
+  }
+
+  legend {
+    margin-bottom: @t3-global-margin / 2;
+  }
+
+  .radio-inline,
+  .checkbox-inline {
+  }
+
+  select {
+    width: auto;
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+
+  .form-limit {
+    margin-top: @line-height-computed;
+    .counter {
+      margin-top: 0;
+    }
+  }
+
+}
+
+// Block level forms elements on Mobile
+@media screen and (max-width: @screen-sm-min) {
+  #searchForm {
+    .radio-inline,
+    .checkbox-inline {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+
+
+
+// Search Result
+// -------------
+.search-results {
+  margin-top: @t3-global-margin;
+
+  // Title
+  .result-title {
+    font-size: @t3-font-size-bigger;
+    margin-top: @t3-global-margin;
+  }
+
+  // Category
+  .result-category {
+    font-size: @t3-font-size-smaller;
+    color: @gray-light;
+  }
+
+  // Result Text
+  .result-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  // Date
+  .result-created {
+    font-size: @t3-font-size-smaller;
+    color: @gray-light;
+  }
+
+  // Higlight
+  .highlight {
+  }
+}
+
+
+
+//
+// SMART SEARCH
+// ---------------------------------------------------------
+div.finder {
+  margin-bottom: @line-height-computed;
+
+  #search-form {
+  }
+
+  #advancedSearch {
+  }
+
+  // The Form
+  #finder-search {
+  }
+
+  // The result
+  #search-results {
+    #search-query-explained{
+    }
+  }
+
+}
+
+
+
+//
+// CONTACT
+// ---------------------------------------------------------
+.contact {}
+
+.contact .accordion-heading .accordion-toggle {
+  font-weight: bold;
+}
+
+
+
+//
+// ARCHIVED ITEMS
+// ---------------------------------------------------------
+#archive-items {
+  > li {
+    line-height: normal;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .intro {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+
+
+//
+// CATEGORY LIST
+// ---------------------------------------------------------
+.categories-list {
+  margin-bottom: @line-height-computed;
+}
+
+.category-desc {
+}
+
+
+// Category List
+// -----------------
+.category-item {
+  .clearfix();
+
+  .page-header {
+    line-height: normal;
+    padding: (@line-height-computed / 2) 5px;
+    margin: 0;
+    font-size: @font-size-large;
+    font-weight: normal;
+  }
+
+  // Sub Categories
+  .category-item {
+    margin-bottom: 0;
+    margin-left: @grid-gutter-width;
+    .page-header {
+      font-size: @font-size-base;
+    }
+  }
+
+}
+
+// Children Category List
+// -----------------------
+.cat-children {
+  h3 {}
+  .page-header {
+    line-height: normal;
+    padding: (@line-height-computed / 2) 5px;
+    margin: 0;
+    font-size: @font-size-large;
+    font-weight: normal;
+  }
+}
+
+
+
+//
+// NEWS FEEDS
+// ---------------------------------------------------------
+
+// Feed categories
+// ---------------
+.newsfeed-category,
+.newsfeed {
+  > h2 {
+    border-bottom: 1px solid @t3-border-color;
+    padding-bottom: @t3-global-padding;
+    margin-bottom: @t3-global-margin;
+    margin-top: 0;
+  }
+
+  .category-desc {
+    margin-bottom: @t3-global-margin;
+  }
+  
+  .category {
+    li {
+      .clearfix();
+    }
+  }
+}
+
+
+// Feeds item
+// ----------
+.newsfeed {
+  > h2 {
+    border-bottom: 1px solid @t3-border-color;
+    padding-bottom: @t3-global-padding;
+    margin-bottom: @t3-global-margin;
+    margin-top: 0;
+  }
+
+  .feed-description {
+    margin-bottom: @t3-global-margin;
+    font-size: @t3-font-size-bigger;
+  }
+  
+  .feed-item-description .feed-description {
+    font-size: @font-size-base;
+  }
+  
+  ol li > a {
+    font-weight: bold;
+    font-size: @t3-font-size-bigger;
+  }
+}
+
+
+
+// 
+// CONTENT NAVIGATIONS
+// ---------------------------------------------------------
+
+//  Pagebreak Nav
+// --------------
+.article-content .pagination {
+
+  ul {
+    border-left: 1px solid @t3-border-color;
+  }
+  
+  li {
+    float: left;
+    padding: (@t3-global-padding / 2) @t3-global-padding;
+    line-height: normal;
+    border: 1px solid @t3-border-color;
+    border-left: 0;
+    // Hover state
+    &:hover {
+    }
+  }
+
+  li a {
+    border: 0;
+    text-decoration: none;
+    background-color: transparent;
+    line-height: normal;
+    padding: 0;
+    // Link States
+    &:hover, &:focus, &:active {
+    }
+  }
+}
+
+.pagenavcounter {
+  margin: 0 0 @t3-global-margin;
+  font-weight: bold;
+}
+
+
+// PageBreak Index
+// ---------------
+#article-index,
+.article-index {
+  margin: 0 0 @t3-global-margin @t3-global-margin;
+  padding: 10px;
+  width: 25%;
+  border: 1px solid @t3-border-color;
+  border-radius: @border-radius-base;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    > li {
+      border: 0;
+      margin-top: 2px;
+    }
+
+    // Link
+    > li > a {
+      border: 0;
+      padding: 5px;
+      border-radius: @nav-pills-border-radius;
+      // Link states
+      &:hover, &:active, &:focus {
+      }
+    }
+
+    // Active
+    > .active > a {
+      border: 0;
+      background: @nav-pills-active-link-hover-bg;
+      color: @nav-pills-active-link-hover-color;
+      // Link states
+      &:hover, &:active, &:focus {
+        border: 0;
+        background: @nav-pills-active-link-hover-bg;
+        color: @nav-pills-active-link-hover-color;
+      }
+    }
+
+  }
+}
+
+
+// Articles Navigation
+// -------------------
+.pagenav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+  
+  > li.pagenav-prev,
+  > li.previous {
+    margin-right: 10px;
+  }
+  
+  > li.pagenav-next,
+  > li.next {
+  }
+
+  li > a {
+    padding: (@t3-global-padding / 2) @t3-global-padding;
+    line-height: normal;
+    border: 1px solid @pagination-border;
+    border-radius: @border-radius-base;
+    &:hover, &:active, &:focus {
+      background-color: @pagination-hover-bg;
+    }
+  }
+
+}
+
+
+// Items More
+// -----------
+.items-more {
+  h3 {
+    margin: 0 0 @t3-global-margin;
+  }
+  
+  .nav {
+    > li {
+      border-top: 1px solid @t3-border-color;
+    }
+    > li > a {
+      padding: @padding-base-vertical 5px;
+    }
+  }
+}
+
+
+// Back Buttons
+// -----------
+.back_button a {
+  display: block;
+  margin: 10px 0;
+  // Link states
+  &:hover, &:focus, &:active {
+  }
+}
+
+
+// Form Control
+// ------------
+.filters {
+  margin: (@t3-global-margin / 2) 0 5px;
+}
+
+.display-limit {
+  margin: (@t3-global-margin / 2) 0 5px;
+}
+
+.filters .filter-search {
+  
+}
+
+.filters .display-limit {
+  float: right;
+  text-align: right;
+}
+
+
+
+
+// ---------------------------------------------------------
+// MESSAGES & NOTIFICATIONS
+// ---------------------------------------------------------
+
+//
+// MESSAGES
+// ---------------------------------------------------------
+#system-message {
+  dt {
+    font-weight: bold;
+  }
+  
+  dd {
+    font-weight: bold;
+  }
+
+  dd.message ul,
+  dd.error ul,
+  dd.notice ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  dd.message ul li,
+  dd.error ul li,
+  dd.notice ul li {
+    background: none;
+    margin: 0;
+    padding: 5px;
+  }
+}
+
+
+// System Standard Messages
+// ------------------------
+#system-message dd.message ul {
+}
+
+// System Error Messages
+// ---------------------
+.error {
+}
+
+.error h2 {
+}
+
+#system-message dd.error ul {
+}
+
+
+// System Notice Messages
+// ----------------------
+#system-message dd.notice ul {
+}
+
+.alert-message {
+  .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
+}
+.alert-notice {
+  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+}
+.alert-error {
+  .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}
+
+
+//
+// Tooltips
+// ---------------------------------------------------------
+.tip-wrap {
+  background: #fff6df;
+  border: 1px solid #fb3;
+  border-radius: 5px;
+  .box-shadow (none);
+  max-width: 300px;
+  z-index: 999;
+}
+
+.tip-title {
+  border-bottom: 1px solid #fb3;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.tip-text {
+  font-size: @font-size-base;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.hasTip img {
+  border: none;
+  margin: 0 5px 0 0;
+}
+
+
+
+// ---------------------------------------------------------
+// MISC
+// ---------------------------------------------------------
+
+// Language 
+// --------
+.languageswitcherload {
+  @media (min-width: @screen-sm) {
+    float: right;
+    width: 100%;
+    .mod-languages {
+      text-align: right;
+    }
+  }
+}
+
+// Calendar 
+// --------
+div.calendar {
+  width: 187px;
+}
+
+
+// ---------------------------------------------------------
+// JOOMLA 3.0 EXTENDING BOOTSTRAP
+// ---------------------------------------------------------
+
+// iFrames
+.iframe-bordered {
+  border: 1px solid @table-border-color;
+}
+
+// Fixed for Chosen
+.chzn-container {
+  display: block;
+}
+
+.chzn-container-single .chzn-single,
+.chzn-container-multi .chzn-choices .search-field input,
+.chzn-container-single .chzn-search input {
+  height: 26px;
+}
+
+.chzn-container-single .chzn-drop,
+.chzn-container .chzn-drop {
+  .box-sizing (content-box) !important;
+}
+
+// Input Prepend Chosen Select Boxes
+.input-prepend .chzn-container-single .chzn-single {
+  border-color: @input-border;
+  height: 26px;
+  border-radius: 0 3px 3px 0;
+  .box-shadow(none);
+}
+
+.input-prepend .chzn-container-active .chzn-single-with-drop {
+  border-radius: 0 3px 0 0;
+}
+
+.input-prepend .chzn-container-single .chzn-drop{
+  border-color: @input-border;
+}
+
+// Chosen proper wrapping in Bootstrap btn-group
+.btn-group .chzn-results {
+  white-space: normal;
+}

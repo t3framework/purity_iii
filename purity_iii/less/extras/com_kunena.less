@@ -1,0 +1,293 @@
+@brand-primary-kunena: #5388B4;
+
+body #Kunena {
+
+//GLOBAL STYLE
+//------------------------
+	a {
+		color: @blue;
+
+		&:hover {
+			color: lighten(@blue,15%)!important;
+			text-decoration: none!important;
+		}
+	}
+
+	h2 {
+		color: @white!important;
+	}
+
+	input {
+		padding: 3px!important;
+		position: relative;
+		top: 1px;
+
+		&[type="checkbox"] {
+			position: relative;
+			top: 2px;
+		}
+
+		&[type="submit"] {
+			top:0px;
+			margin-left: @t3-global-margin/4!important;
+		}
+	}
+
+	.kbutton:hover {
+		background: @brand-primary-kunena!important;
+		color: @white;
+	}
+
+
+	.kheader {
+		padding: @t3-global-margin/3 @t3-global-margin/2!important;
+	}
+
+	option {
+		margin-bottom: 2px;
+	}
+
+	span.ktoggler {
+		top: -6px!important;
+	}
+
+//SELECT
+//------------------------
+	select {
+		background: @white !important;
+		display: inline;
+		padding: 3px!important;
+
+		&:hover,&:active,&:focus {
+			background: @white !important;
+			display: inline!importan;
+			padding: 3px;
+		}
+	}
+
+	#catid {
+		padding-bottom: 2px;
+		padding-top: 2px;
+		position: relative;
+		top: -1px;
+	}
+
+//KWHO-TOTAL
+//------------------------
+	#kwhoisonline {
+		td.kcol-mid {
+			padding: 0px;
+
+			> div {
+				padding: 5px;
+			}
+		}
+
+		.kwho-total {
+			border-bottom: 1px solid lighten(@gray-light, 15%);
+			border-top: none;
+			border-left: none;
+			border-right: none;
+		}
+
+		.kwholegend {
+			border-bottom: none;
+			border-top: 1px solid lighten(@gray-light, 15%);
+			border-left: none;
+			border-right: none;
+			margin-top: 0px;
+		}
+	}
+
+//KBLOCK
+//----------------------
+	div.kblock div.kheader {
+		h2 span {
+			color: @white;
+		}
+
+		.ktitle-desc {
+			color: @white;
+		}
+	}
+
+// KPBOX
+//--------------------
+	#kprofilebox {
+		.kprofilebox td.kprofileboxcnt {
+			padding: @t3-global-padding/2 8px;
+		}
+
+		.input {
+			margin-top: @t3-global-margin/2;
+
+			span {
+				margin-right: @t3-global-margin/2;
+
+				input {
+					display: inline;
+
+					&[type="checkbox"] {
+						position: relative;
+						top: 2px;
+					}
+
+					&[type="submit"] {
+						padding: 2px 4px;
+						position: relative;
+						top: 1px;
+					}
+				}
+			}
+		}
+
+		.klink-block {
+			margin-top: @t3-global-margin/4;
+
+			span {
+				margin-right: @t3-global-padding/4;
+			}
+		}
+	}
+
+//ACTIONS
+//----------------------
+	.klist-actions {
+		#sel {
+			margin-bottom: 2px;
+		}
+
+		.kright {
+			#catid {
+				display: inline;
+			}
+
+			.kbutton {
+				margin-left: @t3-global-padding/4!important;
+				padding: 4px!important;
+			}
+		}
+	}
+
+
+//KLIST-MARKALLCATSREAD
+//------------------------
+	.klist-markallcatsread {
+		#jumpto {
+			#catid {
+				display: inline;
+			}
+		}
+	}
+
+//KPROFILE
+//-------------------------
+	#kprofile {
+		.tabs{
+			dt {
+				margin-right: 2px;
+				border-radius: 5px 5px 0 0;
+				font-weight: normal;
+			}
+
+			.open {
+				background: @brand-primary-kunena;
+				color: @white;
+			}
+
+			.closed {
+				background: @gray;
+				color: @white;
+			}
+		}
+
+		.kbutton-container {
+			input.kbutton {
+				margin: 0px!important;
+				padding: @t3-global-margin/4!important;
+				position: relative;
+				top: 0.5px;
+			}
+		}
+
+		.editlinktip.hasTip input {
+			display: inline;
+			margin-right: @t3-global-margin/4;
+		}
+	}
+
+	.k-profile {
+		span a.kwho-admin {
+			color: @white!important;
+
+			&:hover {
+				color: lighten(@blue,15%)!important;
+			}
+		}
+	}
+
+//KADVSEARCH
+//-------------------------
+	#advsearch tr {
+		#kusername {
+			display: inline;
+		}
+
+		fieldset {
+			border: 1px solid lighten(@gray-light, 15%);
+
+			legend {
+				width: inherit;
+			}
+
+			#mode, #childforums-lbl {
+				margin-top: @t3-global-margin/2;
+			}
+		}
+
+		input[type="text"] {
+			top: 0px;
+		}
+
+		input[type="submit"] {
+			top: 1px;
+		}
+
+		#limit {
+			margin: 0px;
+		}
+
+		#categorylist {
+			display: block;
+		}
+
+		#search-posts-start input[type="text"] {
+			display: inline;
+			margin-right: @t3-global-margin/4;
+		}
+	}
+
+//KLIST-BOTTOM
+//---------------------------
+	div.klist-bottom {
+		padding-bottom: 38px!important;
+	}
+
+
+// PAGINATION
+//---------------------------
+	ul.kpagination {
+		position: relative;
+		top: -2px;
+
+		a:link,a:visited {
+			padding: 1px 5px;
+		}
+
+		span {
+			background: @brand-primary-kunena;
+			color: @white;
+			padding: 1px 5px;
+		}
+	}
+}

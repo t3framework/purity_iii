@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="page-options" label="Page Display" description="Page Display Description">
+            <field name="masshead-title" type="text" default="" label="Masshead Title" description="Masshead Title" />
+            <field name="masshead-slogan" type="textarea" default="" label="Masshead Slogan" description="Masshead Slogan" filter="RAW" />
+        </fieldset>
+    </fields>
+</form>

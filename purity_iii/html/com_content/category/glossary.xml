@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="xLayout - Glossary" option="COM_CONTENT_CATEGORY_VIEW_BLOG_OPTION">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_ARTICLE_CATEGORY_BLOG"/>
+		<message>
+			<![CDATA[COM_CONTENT_CATEGORY_VIEW_BLOG_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+
+			<field name="id" type="category"
+						 description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+						 extension="com_content"
+						 label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+						 required="true"/>
+
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic" label="Options">
+            <field name="layout_type" type="hidden" default="blog"/>
+            <field name="featured_leading" type="hidden" default="0"/>
+            <field name="featured_intro" type="hidden" default="0"/>
+            <field name="featured_intro_columns" type="hidden" default="0"/>
+            <field name="featured_links" type="hidden" default="0"/>
+            <field name="orderby_pri" type="hidden" default="none"/>
+            <field name="orderby_sec" type="hidden" default="alpha"/>
+            <field name="article_ordering" type="hidden" default="a.title"/>
+            <field name="show_category_title" type="list"
+                   label="JGLOBAL_SHOW_CATEGORY_TITLE"
+                   description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+                    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_description" type="list"
+                   description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+                   label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+                    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_description_image" type="list"
+                   description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+                   label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+                    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+		</fieldset>
+	</fields>
+</metadata>

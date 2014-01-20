@@ -1,0 +1,90 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ---------------------------------------------------------
+// CORPORATE LAYOUT
+// ---------------------------------------------------------
+
+//
+// Generic Corporate Layout
+// --------------------------------------------------------
+.corporate {
+
+  // Slideshow
+  // ----------------------------
+  .slideshow {
+    background: @gray-lightest;
+    border-bottom: 1px solid @gray-lighter;
+    padding: (@t3-global-padding * 2) 0;
+  }
+
+  // Spotlight 1
+  // ----------------------------
+  .t3-sl-1 {
+    border-bottom: 1px solid @gray-lighter;
+  }
+
+  .t3-sl-1 .t3-module,
+  .t3-sl-2 .t3-module,
+  .t3-sl-3 .t3-module {
+    margin-bottom: 0;
+  }
+
+  // Spotlight 2
+  // ----------------------------
+  .t3-sl-2 {
+    padding: 0;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  // Media module
+  // ----------------------------
+  .t3-module .media {
+    border-bottom: 1px solid @gray-lighter;
+    padding-bottom: @t3-global-padding / 2;
+
+    &:last-child {
+      border: 0;
+      padding: 0;
+    }
+  }
+
+}
+
+
+// ---------------------------------------------------------
+// JOOMLA OVERRIDE
+// ---------------------------------------------------------
+.corporate {
+  .items-leading {
+    border-bottom: 1px solid @gray-lighter;
+    margin-bottom: @t3-global-margin * 2;
+  }
+
+  .items-row {
+    border-bottom: 1px solid @gray-lighter;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}
