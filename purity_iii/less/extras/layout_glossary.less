@@ -10,7 +10,7 @@
  * @Link:         http://t3-framework.org
  *------------------------------------------------------------------------------
  */
-
+@import "../vars.less";
 
 // ---------------------------------------------------------
 // GLOSSARY LAYOUT
@@ -20,25 +20,36 @@
 // -----------------------------------
 .glossary-nav {
   margin-bottom: @t3-global-margin * 3;
-  background: @gray-dark;
+  position: relative;
+  z-index: 10;
+  height: 50px;
 
-  .nav-pills {
-    > li {
-      border-right: 1px solid #fff;
-      margin: 0;
+  nav {
+    padding: 0 @t3-global-margin*2 0 0;
+
+    &.affix {
+      top: 57px;
     }
-    > li > a {
-      padding: 10px 15px;
-      font-size: @font-size-h3;
-      line-height: normal;
+
+    .nav-pills {
       background: @gray-dark;
-      color: #fff;
-      font-weight: 600;
-      text-transform: uppercase;
-      &:hover, &:active, &:focus {
-        background: @brand-primary;
+      > li {
+        border-right: 1px solid #fff;
+        margin: 0;
       }
-    } 
+      > li > a {
+        padding: 10px 15px;
+        font-size: @font-size-h3;
+        line-height: normal;
+        background: @gray-dark;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        &:hover, &:active, &:focus {
+          background: @brand-primary;
+        }
+      }
+    }
   }
 }
 
@@ -52,6 +63,11 @@
 // ---------------------
 .glossary-group {
   margin-bottom: @t3-global-margin * 2;
+  position: relative;
+  a[name] {
+    position: absolute;
+    top: -120px;
+  }
 }
 
 // Title

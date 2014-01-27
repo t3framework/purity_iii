@@ -146,7 +146,7 @@ $info_positions = $params->get('featured_info_positions', array());
 
 		<div class="col-md-4">
 			<?php if (count ($links)): ?>
-				<div class="magazine-featured-links">
+				<div class="magazine-links magazine-featured-links">
 					<?php foreach ($links as $item) :?>
 						<div class="magazine-item link-item">
 							<?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $item); ?>

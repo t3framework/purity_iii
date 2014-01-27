@@ -1,0 +1,81 @@
+
+
+.porfolio .page-header {
+  text-align: center;
+  border-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.porfolio-items {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+.porfolio-items .thumbnail {
+  border: 0;
+  padding: 0;
+  margin: 20px 0;
+}
+.porfolio-items .thumbnail > a {
+  color: #444444;
+  text-decoration: none;
+}
+.porfolio-items .thumbnail > a:hover,
+.porfolio-items .thumbnail > a:active,
+.porfolio-items .thumbnail > a:focus {
+  color: #ff8800;
+  text-decoration: none;
+}
+.porfolio-items .item-image {
+  float: none !important;
+  border: 1px solid #eeeeee;
+  padding: 3px;
+  position: relative;
+  -webkit-transition: border-color 0.2s ease-in;
+  transition: border-color 0.2s ease-in;
+}
+.porfolio-items .item-image img {
+  width: 100%;
+  padding: 0;
+}
+.porfolio-items .thumbnail > a:hover .item-image,
+.porfolio-items .thumbnail > a:active .item-image,
+.porfolio-items .thumbnail > a:focus .item-image {
+  border-color: #bbbbbb;
+}
+.porfolio-items .thumbnail > a:hover .item-image img,
+.porfolio-items .thumbnail > a:active .item-image img,
+.porfolio-items .thumbnail > a:focus .item-image img {
+  opacity: .7;
+}
+.porfolio-items h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.porfolio-items p {
+  color: #666666;
+  margin: 0;
+}
+.porfolio .item-state {
+  width: 70px;
+  height: 70px;
+  background: url(../../../../images/porfolio-item-states.png) no-repeat center top;
+  display: block;
+  text-indent: -9999em;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+.porfolio .state-free {
+  background-position: center;
+}
+.porfolio .state-hot {
+  background-position: center bottom;
+}
+.porfolio .item-demo-url {
+  margin-top: 10px;
+}

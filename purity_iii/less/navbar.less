@@ -55,12 +55,17 @@
 // Navbar toggle
 // -------------
 .navbar-toggle {
-
   padding: 0;
-  height: 35px;
-  line-height: 35px;
-  width: 35px;
-  margin-left: @navbar-padding-horizontal;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  width: @navbar-height;
+  margin: 0;
+
+  // States
+  &:hover, &:active, &:focus {
+    outline: none;
+    .box-shadow(none);
+  }
 
   // Bars
   .fa-bars {
@@ -151,20 +156,28 @@
   .navbar-nav {
 
     > li {
-      margin-left: 30px;
+      @media screen and (min-width: @grid-float-breakpoint) {
+        margin-left: 30px;
+      }
     }
 
     > li > a {
       color: @navbar-default-link-color;
-      line-height: @navbar-height;
-      padding: 0 2px;
+      padding: @t3-global-padding;
       text-transform: uppercase;
+
+      @media screen and (min-width: @grid-float-breakpoint) {
+        padding: 0;
+        line-height: @navbar-height;
+      }
 
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
-        .box-shadow(inset 0 -2px 0 #fff);
+        @media screen and (min-width: @grid-float-breakpoint) {
+          .box-shadow(inset 0 -2px 0 #fff);
+        }
       }
     }
     > .active > a {
@@ -173,19 +186,24 @@
       &:focus {
         color: @navbar-default-link-active-color;
         background-color: @navbar-default-link-active-bg;
-        .box-shadow(inset 0 -2px 0 #fff);
+        @media screen and (min-width: @grid-float-breakpoint) {
+          .box-shadow(inset 0 -2px 0 #fff);
+        }
       }
     }
   }
 
   .navbar-toggle {
-    border-color: @navbar-default-toggle-border-color;
+    border: 0;
     &:hover,
     &:focus {
-      background-color: @navbar-default-toggle-hover-bg;
+      background: @navbar-default-border;
+      color: @navbar-default-link-hover-color;
     }
-    .icon-bar {
-      background-color: @navbar-default-toggle-icon-bar-bg;
+    .icon-bar,
+    .fa-bars {
+      background-color: transparent;
+      color: @navbar-default-color;
     }
   }
 
@@ -210,7 +228,9 @@
       &:focus {
         background-color: @navbar-default-link-active-bg;
         color: @navbar-default-link-active-color;
-        .box-shadow(inset 0 -2px 0 #fff);
+        @media screen and (min-width: @grid-float-breakpoint) {
+          .box-shadow(inset 0 -2px 0 #fff);
+        }
         // Caret
         .caret {
           border-top-color: @navbar-default-link-active-color;
@@ -224,11 +244,19 @@
     }
 
 
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @grid-float-breakpoint) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
+        background: @navbar-default-border;
+
+        > li {
+          border-top-color: darken(@navbar-default-border,5%);
+        }
+
         > li > a {
           color: @navbar-default-link-color;
+          padding: 20px 20px 20px 30px;
+
           &:hover,
           &:focus {
             color: @navbar-default-link-hover-color;
@@ -253,6 +281,27 @@
         }
       }
     }
+
+
+    // Level 2 dropdown-menu on Collapse Menu
+    @media screen and (max-width: @grid-float-breakpoint) {
+      .open .level2.dropdown-menu {
+        background: darken(@navbar-default-border,5%);
+        border-top: 1px solid darken(@navbar-default-border,10%);
+        margin-top: 0;
+
+        > li {
+          border-top-color: darken(@navbar-default-border,10%);
+        }
+
+        > li > a {
+          padding-left: 40px;
+        }
+
+      }
+    }
+
+
   }
 
 
@@ -279,13 +328,15 @@
   margin-bottom: 0;
   border-radius: 0;
 
+  > .container {
+    position: relative;
+  }
 
   // Navbar
   // -------
   .t3-navbar {
     padding-left: 0;
     padding-right: 0;
-    border-left: 1px solid @navbar-default-border;
     float: left;
   }
 

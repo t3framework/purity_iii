@@ -27,6 +27,8 @@ fieldset {
 }
 
 legend {
+  padding-bottom: @t3-global-padding / 2;
+  font-weight: 700;
 }
 
 label {
@@ -292,6 +294,11 @@ output {
 .btn-info {
 }
 
+// T3 Note: Inverse appears as dark-grey
+.btn-inverse {
+  .button-variant(@btn-inverse-color; @btn-inverse-bg; @btn-inverse-border);
+}
+
 
 // Link buttons
 // --------------------------------------------------
@@ -346,6 +353,22 @@ output {
 .btn-block + .btn-block {
   margin-top: 5px;
 }
+
+
+// CTA button
+// --------------------------------------------------
+.btn-actions {
+  .btn-lg {
+    font-size: @font-size-h3;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  .btn + .btn {
+    margin-left: 20px;
+  }
+}
+
 
 
 

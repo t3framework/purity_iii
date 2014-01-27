@@ -68,14 +68,14 @@ function modChrome_FeatureRow($module, &$params, &$attribs)
 	$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
 	if (!empty ($module->content)) {
-		$html = "<{$moduleTag} class=\"feature-row {$moduleClassSfx} {$moduleClass}\" id=\"Mod{$module->id}\">" .
+		$html = "<{$moduleTag} class=\"row-feature {$moduleClassSfx} {$moduleClass}\" id=\"Mod{$module->id}\">" .
 					"<div class=\"container\">" . $badge;
 
 		if ($module->showtitle != 0) {
-			$html .= "<{$headerTag} class=\"feature-row-title {$headerClass}\"><span>{$module->title}</span></{$headerTag}>";
+			$html .= "<{$headerTag} class=\"row row-feature-title {$headerClass}\"><span>{$module->title}</span></{$headerTag}>";
 		}
 
-		$html .= "<div class=\"feature-row-ct\">{$module->content}</div></div></{$moduleTag}>";
+		$html .= "<div class=\"row row-feature-ct\">{$module->content}</div></div></{$moduleTag}>";
 
 		echo $html;
 	}

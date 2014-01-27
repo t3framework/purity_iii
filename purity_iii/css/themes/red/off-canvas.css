@@ -88,11 +88,11 @@ html[dir="ltr"] .off-canvas-right.t3-off-canvas {
 }
 .t3-off-canvas {
   background: #ffffff;
-  color: #333333;
+  color: #444444;
 }
 .t3-off-canvas .t3-off-canvas-header {
   background: #eeeeee;
-  color: #333333;
+  color: #444444;
   padding: 6px 12px;
 }
 .t3-off-canvas .t3-off-canvas-header h2 {
@@ -599,40 +599,48 @@ html[dir="ltr"] .off-canvas-right.old-ie .t3-off-canvas {
 .off-canvas-toggle {
   border-radius: 0;
   border: 0;
+  background: transparent;
+  color: #ffcccc;
   padding: 0;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  position: absolute;
   top: 0;
   left: 0;
 }
+.off-canvas-toggle:hover,
+.off-canvas-toggle:active,
 .off-canvas-toggle:focus {
   outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #b30000;
+  color: #ffffff;
 }
 .t3-off-canvas {
   background: #ffffff;
-  color: #333333;
+  color: #444444;
 }
 .t3-off-canvas .t3-off-canvas-header {
   background: #eeeeee;
-  color: #333333;
+  color: #444444;
   padding: 0 0 0 12px;
-  height: 35px;
+  height: 55px;
 }
 .t3-off-canvas .t3-off-canvas-header h2 {
   margin: 0;
-  line-height: 35px;
+  line-height: 55px;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
 .t3-off-canvas .close {
   margin: 0;
-  height: 35px;
-  line-height: 35px;
-  width: 35px;
-  background: #bbbbbb;
+  height: 55px;
+  line-height: 55px;
+  width: 55px;
+  background: transparent;
   position: absolute;
   top: 0;
   right: 0;

@@ -13,10 +13,9 @@ defined('_JEXEC') or die;
 ?>
 
 <div id="t3-mainbody" class="t3-mainbody">
-	<div class="row">
 
 		<!-- MAIN CONTENT -->
-		<div id="t3-content" class="t3-content col-xs-12">
+		<div id="t3-content" class="t3-content">
 			<?php if($this->hasMessage()) : ?>
 			<jdoc:include type="message" />
 			<?php endif ?>
@@ -24,5 +23,4 @@ defined('_JEXEC') or die;
 		</div>
 		<!-- //MAIN CONTENT -->
 
-	</div>
 </div> 

@@ -67,10 +67,15 @@
   margin-top: -(@t3-global-margin / 2); // If there is an Article Header, minus the gap
 }
 
+// Bigger font-size in Article View
+.item-page .article-aside {
+  font-size: @font-size-base;
+  margin-bottom: @t3-global-margin * 2;
+}
+
 .article-info {
   margin: 0;
   width: 85%;
-  font-size: @t3-font-size-smaller;
 
   a {
     // Link states
@@ -104,16 +109,18 @@
 
 // Category Name
 .category-name {
+  text-transform: capitalize;
   .fa {
     display: none;
   }
   a {
     background: @brand-primary;
-    color: @gray-lighter;
+    color: #fff;
     padding: 2px 5px;
     // Link states
     &:hover, &:focus, &:active {
-      background: darken(@brand-primary,5%);
+      background: darken(@brand-primary,15%);
+      color: #fff;
       text-decoration: none;
     }
   }
@@ -216,11 +223,22 @@ article,
   }
 }
 
+// Images on List and Blog layout
+.pull-right.article-image-intro {
+  float: left !important;
+  margin-left: 0 !important;
+  img {
+    margin-left: 0 !important;
+    margin-right: @t3-global-margin;
+  }
+}
+
 // Reponsive Article Images on Mobile
 @media screen and (max-width: @screen-xs-max) {
   article,
   .article-intro {
-    img, .img_caption,
+    img, img[align=left], img[align=right],
+    .img_caption,
     .article-image-full,
     .article-image-intro,
     .img-intro-none,
@@ -255,7 +273,7 @@ article,
     &:hover, &:focus, &:active {
       background: @gray-light;
       border-color: @gray-light;
-      color: @link-color-hover;
+      color: @link-hover-color;
     }
   }
 }
@@ -278,6 +296,37 @@ article aside .btn-group {
     margin-left: 2px;
   }
 
+}
+
+
+
+//
+// TAGS CATEGORY
+// ---------------------------------------------------------
+.tag-category {
+  
+  // Filter bar
+  .filters {
+    border-bottom: 1px solid @gray-lighter;
+    padding: @t3-global-padding;
+  }
+
+  .thumbnails {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      background: transparent;
+      border-bottom: 1px solid @gray-lighter;
+      padding: (@t3-global-padding / 2) 0;
+    }
+
+    li > h3 {
+      margin-top: 0;
+    }
+
+  }
 }
 
 
@@ -1222,7 +1271,8 @@ div.calendar {
 
 // Fixed for Chosen
 .chzn-container {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .chzn-container-single .chzn-single,

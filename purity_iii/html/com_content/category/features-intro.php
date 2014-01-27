@@ -17,12 +17,6 @@ $items = $this->items;
 ?>
 <div class="blog<?php echo $this->pageclass_sfx;?> features-intro">
 
-	<?php if (empty($this->lead_items) && empty($this->link_items) && empty($this->intro_items)) : ?>
-		<?php if ($this->params->get('show_no_articles', 1)) : ?>
-			<p><?php echo JText::_('COM_CONTENT_NO_ARTICLES'); ?></p>
-		<?php endif; ?>
-	<?php endif; ?>
-
 	<?php if (!empty($items)) : ?>
 		<?php foreach ($items as &$item) : ?>
 			<?php

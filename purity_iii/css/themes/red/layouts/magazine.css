@@ -1,0 +1,175 @@
+
+
+.magazine-item:before,
+.magazine-featured-leading:before,
+.magazine-featured-intro:before,
+.magazine-category:before,
+.magazine-item:after,
+.magazine-featured-leading:after,
+.magazine-featured-intro:after,
+.magazine-category:after {
+  content: " ";
+  display: table;
+}
+.magazine-item:after,
+.magazine-featured-leading:after,
+.magazine-featured-intro:after,
+.magazine-category:after {
+  clear: both;
+}
+.magazine .page-subheader h2 {
+  font-size: 42px;
+}
+.magazine-category-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  background: #eeeeee;
+  padding: 10px;
+}
+.magazine-category-title strong {
+  font-weight: 600;
+}
+.magazine-category-title .fa {
+  font-size: 14px;
+  position: relative;
+  top: -1px;
+  left: 2px;
+}
+.magazine-category-title > a {
+  display: inline-block;
+  color: #444444;
+  text-transform: uppercase;
+}
+.magazine-category-title > a:hover,
+.magazine-category-title > a:active,
+.magazine-category-title > a:focus {
+  text-decoration: none;
+  color: #cc0000;
+}
+.magazine-item .page-header {
+  padding-bottom: 0;
+  margin-bottom: 5px;
+  border-bottom: 0;
+}
+.magazine-item .page-header h2 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.275;
+  font-weight: 700;
+}
+.magazine-item .page-header h2 a:hover,
+.magazine-item .page-header h2 a:active,
+.magazine-item .page-header h2 a:focus {
+  text-decoration: none;
+}
+.magazine-item .item-image {
+  overflow: hidden;
+}
+.magazine-item .item-image,
+.magazine-item .pull-left.item-image,
+.magazine-item .pull-right.item-image {
+  width: 100%;
+  max-width: 100%;
+  float: none !important;
+  margin-bottom: 20px;
+}
+.magazine-item .item-image img,
+.magazine-item .pull-left.item-image img,
+.magazine-item .pull-right.item-image img,
+.magazine-item .img_caption {
+  width: 100% !important;
+  max-width: 100%;
+}
+.magazine-item .article-aside {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.magazine-item .article-info {
+  color: #999999;
+  margin: 0;
+  width: 100%;
+}
+.magazine-item-ct p:last-child {
+  margin-bottom: 0;
+}
+.magazine-leading {
+  margin-bottom: 20px;
+}
+.magazine-leading .magazine-item {
+  margin-bottom: 20px;
+}
+.magazine-leading .magazine-item .page-header h2 {
+  font-size: 35px;
+}
+.magazine-leading .magazine-item .item-image {
+  max-height: 300px;
+}
+.magazine-leading .magazine-item .magazine-item-ct {
+  font-size: 16px;
+}
+.magazine-intro {
+  margin-bottom: 20px;
+}
+.magazine-intro .magazine-item {
+  margin-bottom: 20px;
+}
+.magazine-intro .magazine-item .item-image {
+  max-height: 120px;
+}
+.magazine-intro .magazine-item .item-image p.img_caption {
+  display: none;
+}
+.magazine-links {
+  margin-top: 40px;
+}
+.magazine-links::before {
+  display: inline-block;
+  content: "MORE NEWS";
+  background: #444444;
+  font-weight: normal;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.magazine-links .link-item {
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 0 9px;
+}
+.magazine-links .page-header {
+  margin: 0;
+}
+.magazine-links .page-header h2 {
+  font-size: 16px;
+}
+.magazine-links .article-aside {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.magazine-featured-links {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.magazine-category {
+  margin-bottom: 40px;
+}
+.magazine-category .row-articles {
+  margin-bottom: 20px;
+}
+.magazine-category .row-articles:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .magazine-category .row-articles .magazine-item-media {
+    padding-right: 0;
+  }
+}
+.magazine-category .magazine-leading {
+  margin-bottom: 40px;
+}
+.magazine-category .magazine-item .category-name {
+  display: none;
+}
+.magazine-category .magazine-item-ct {
+  color: #666666;
+  font-size: 12px;
+}

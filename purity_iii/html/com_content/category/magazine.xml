@@ -23,62 +23,62 @@
 
 	<!-- Add fields to the parameters object for the layout. -->
 	<fields name="params">
-		<fieldset name="basic" label="Entry">
+		<fieldset name="basic" label="TPL_MN_MAGAZINE_ENTRY_LABEL">
 			<field name="layout_type" type="hidden" default="blog"/>
 
 			<field name="magazine_layout" type="spacer" class="text"
-						 label="Configuration for Magazine layout"
+						 label="TPL_MN_MAGAZINE_ENTRY_CONFIG_LABEL"
 				/>
 
 			<field name="featured_leading" type="text"
-						 description="Number of featured leading articles"
-						 label="# Featured leading articles"
+						 description="JGLOBAL_NUM_LEADING_ARTICLES_DESC"
+						 label="JGLOBAL_NUM_LEADING_ARTICLES_LABEL"
 						 size="3"
 						 default="1"
 				/>
 
 			<field name="featured_intro" type="text"
-						 description="Number of featured intro articles"
-						 label="# Featured intro articles"
+						 description="JGLOBAL_NUM_INTRO_ARTICLES_DESC"
+						 label="JGLOBAL_NUM_INTRO_ARTICLES_LABEL"
 						 size="3"
 						 default="3"
 				/>
 
 			<field name="featured_intro_columns" type="text"
-						 description="Number of columns which to show Feature Articles"
-						 label="# Featured columns"
+						 description="TPL_MN_MAGAZINE_FEATURED_NUM_COLUMNS_DESC"
+						 label="TPL_MN_MAGAZINE_FEATURED_NUM_COLUMNS_LABEL"
 						 size="3"
 						 default="3"
 				/>
 
 			<field name="featured_links" type="text"
-						 description="Number of featured links articles"
-						 label="# Featured links articles"
+						 description="TPL_MN_MAGAZINE_FEATURED_NUM_LINKS_DESC"
+						 label="TPL_MN_MAGAZINE_FEATURED_NUM_LINKS_LABEL"
 						 size="3"
 						 default="5"
 				/>
 
 			<field name="highlight_desc" type="spacer" class="text"
-						 label="Configuration for Subcategory"
+						 label="TPL_MN_MAGAZINE_HIGHLIGHT_CONFIG_LABEL"
 				/>
 
 			<field name="highlight_count" type="text"
-						 description="Number of highlight category articles"
-						 label="# Highlight"
+						 description="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_ARTICLE_DESC"
+						 label="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_ARTICLE_LABEL"
 						 size="3"
 						 default="4"
 				/>
 
 			<field name="highlight_columns" type="text"
-						 description="Number of columns which to show highlight articles for a category"
-						 label="# Highlight columns"
+						 description="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_COLUMN_DESC"
+						 label="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_COLUMN_LABEL"
 						 size="3"
 						 default="2"
 				/>
 
 			<field name="show_highlight_intro" type="list"
-						 description="Show Intro text in highlight articles"
-						 label="Highlight intro text"
+						 description="TPL_MN_MAGAZINE_HIGHLIGHT_SHOW_INTRO_DESC"
+						 label="TPL_MN_MAGAZINE_HIGHLIGHT_SHOW_INTRO_LABEL"
 						 default="1"
 				>
 				<option value="0">JHIDE</option>
@@ -87,14 +87,14 @@
 
 			<field name="featured_info_positions" type="list"
 						 multiple="true"
-						 description="Select positions to show Article Info"
-						 label="Article Info positions"
+						 description="TPL_MN_MAGAZINE_ENTRY_INTRO_POSITION_DESC"
+						 label="TPL_MN_MAGAZINE_ENTRY_INTRO_POSITION_LABEL"
 				>
 				<option value=""></option>
-				<option value="leading">Feature Leading</option>
-				<option value="intro">Feature Intro</option>
-				<option value="link">Feature Links</option>
-				<option value="highlight">Highlight</option>
+				<option value="leading">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_FEATURED</option>
+				<option value="intro">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_INTRO</option>
+				<option value="link">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_LINKS</option>
+				<option value="highlight">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_HIGHLIGHT</option>
 			</field>
 
 			<field name="orderby_pri" type="list"
@@ -136,10 +136,10 @@
 			</field>
 
 		</fieldset>
-		<fieldset name="magazine_subcategory" label="Sub category">
+		<fieldset name="magazine_subcategory" label="TPL_MN_MAGAZINE_SUB_LABEL">
 
 			<field name="subcategory_layout" type="spacer" class="text"
-						 label="Configuration for Sub-category layout"
+						 label="TPL_MN_MAGAZINE_SUB_CONFIG_LABEL"
 				/>
 
 			<field name="num_leading_articles" type="text"
@@ -168,18 +168,45 @@
 
 			<field name="subcat_info_positions" type="list"
 						 multiple="true"
-						 description="Select positions to show Article Info"
-						 label="Article Info positions"
+						 description="TPL_MN_MAGAZINE_SUB_INTRO_POSITION_DESC"
+						 label="TPL_MN_MAGAZINE_SUB_INTRO_POSITION_LABEL"
 				>
 				<option value=""></option>
-				<option value="leading">Leading</option>
-				<option value="intro">Intro</option>
-				<option value="link">Links</option>
+				<option value="leading">TPL_MN_MAGAZINE_SUB_INTRO_POS_LEADING</option>
+				<option value="intro">TPL_MN_MAGAZINE_SUB_INTRO_POS_INTRO</option>
+				<option value="link">TPL_MN_MAGAZINE_SUB_INTRO_POS_LINKS</option>
+			</field>
+
+			<field name="show_category_title" type="list"
+						 label="JGLOBAL_SHOW_CATEGORY_TITLE"
+						 description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+				>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_description" type="list"
+						 description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+						 label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+				>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_description_image" type="list"
+						 description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+						 label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+				>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
 			</field>
 
 			<field name="show_subcat_intro" type="list"
-						 description="Show Intro Text in Sub category intro articles"
-						 label="Show Intro Text"
+						 description="TPL_MN_MAGAZINE_SUB_SHOW_INTRO_DESC"
+						 label="TPL_MN_MAGAZINE_SUB_SHOW_INTRO_LABEL"
 						 default="1"
 				>
 				<option value="0">JHIDE</option>
@@ -215,9 +242,10 @@
 
 		</fieldset>
 
-		<fieldset name="article_options" label="Article">
+		<fieldset name="article_options" label="TPL_MN_MAGAZINE_ARTICLE_LABEL">
+
 			<field name="article_layout" type="componentlayout"
-						 label="Article Layout"
+						 label="TPL_MN_MAGAZINE_ARTICLE_LAYOUT_LABEL"
 						 description="JFIELD_ALT_COMPONENT_LAYOUT_DESC"
 						 useglobal="true"
 						 extension="com_content" view="article"
@@ -235,7 +263,7 @@
 
 		</fieldset>
 
-		<fieldset name="article_info_options" label="Article Info Options">
+		<fieldset name="article_info_options" label="TPL_MN_MAGAZINE_ARTICLE_INFO_LABEL">
 
 			<field name="show_title" type="list"
 						 description="JGLOBAL_SHOW_TITLE_DESC"

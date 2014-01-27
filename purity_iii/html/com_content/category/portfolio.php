@@ -35,7 +35,7 @@ $items = $this->items;
 		<div class="row row-porfolio">
 	<?php endif ?>
 
-			<div class="col-xs-<?php echo $span ?>">
+			<div class="col-xs-6 col-md-<?php echo $span ?>">
 				<?php
 				// Load category_item.php by default
 				$this->item = $item;

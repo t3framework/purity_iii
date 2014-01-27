@@ -1,0 +1,125 @@
+
+.com_mijoshop table.form td {
+  border-top: 0;
+}
+.com_mijoshop .buttons {
+  padding: 10px 20px;
+}
+.com_mijoshop #header_oc .links {
+  top: 35px;
+}
+.com_mijoshop #header_oc #search_oc {
+  top: 5px;
+  width: 125px;
+}
+.com_mijoshop #header_oc #search_oc input {
+  height: 25px;
+}
+.com_mijoshop #header_oc #currency {
+  font-size: 15px;
+  font-weight: bold;
+  top: 8px;
+}
+.com_mijoshop #header_oc #currency a {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.com_mijoshop #header_oc .mini-cart-info td,
+.com_mijoshop #header_oc .mini-cart-total td {
+  border-top: 0;
+}
+.com_mijoshop .product-filter {
+  padding-bottom: 15px;
+}
+.com_mijoshop .product-filter .limit select,
+.com_mijoshop .product-filter .sort select {
+  display: inline-block;
+  padding: 2px;
+  height: 25px;
+  line-height: 25px;
+}
+.com_mijoshop .product-grid {
+  width: auto;
+  margin: 0 -10px -20px;
+}
+.com_mijoshop .product-grid:before,
+.com_mijoshop .product-grid:after {
+  content: " ";
+  display: table;
+}
+.com_mijoshop .product-grid:after {
+  clear: both;
+}
+.com_mijoshop .product-grid > div {
+  float: left;
+  width: 25%;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+.com_mijoshop .product-grid > div > div {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.com_mijoshop .product-grid > div img {
+  max-width: 100%;
+}
+.com_mijoshop .product-grid > div:nth-child(4n + 1) {
+  clear: both;
+}
+.com_mijoshop .box_oc .box-content {
+  padding: 20px;
+}
+.com_mijoshop .product-info > .left {
+  width: 30% !important;
+}
+.com_mijoshop .product-info > .right {
+  width: 70% !important;
+  border-bottom: 1px solid #E7E7E7;
+  border-right: 1px solid #E7E7E7;
+  min-height: 352px;
+}
+.com_mijoshop .product-info .description,
+.com_mijoshop .product-info .price,
+.com_mijoshop .product-info .cart,
+.com_mijoshop .product-info .review {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.com_mijoshop .product-info .review {
+  border: 0;
+}
+.com_mijoshop .product-info .review div {
+  padding-left: 0;
+  padding-right: 0;
+}
+.com_mijoshop .product-info .review .share {
+  border-bottom: 0;
+}
+.com_mijoshop .product-info .cart div input[type="text"],
+.com_mijoshop .product-info .cart div input[type="button"] {
+  display: inline-block;
+}
+.com_mijoshop .product-info .cart div input[type="text"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.com_mijoshop .tab-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.com_mijoshop #footer_oc {
+  border: 1px solid #DBDEE1;
+  border-radius: 7px;
+}
+.com_mijoshop #footer_oc h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.com_mijoshop .box-category {
+  padding-left: 20px;
+}
+.com_mijoshop .box-product .image {
+  margin-bottom: 10px;
+}

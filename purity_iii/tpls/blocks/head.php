@@ -44,10 +44,6 @@ $this->addStyleSheet(JURI::base(true) . '/templates/system/css/system.css');
 $this->addHead();
 ?>
 
-<!-- GOOGLE FONT -->
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-<!-- //GOOGLE FONT -->
-
 <?php
 // CUSTOM CSS
 if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {

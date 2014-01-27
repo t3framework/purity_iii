@@ -35,6 +35,15 @@
 // Generic Magazine Elements
 // --------------------------------------------------------
 
+// Page Sub Header
+// ----------------------------
+.magazine .page-subheader {
+  h2 {
+    font-size: @font-size-h1;
+  }
+}
+
+
 // Category Title
 // ----------------------------
 .magazine-category-title {
@@ -72,14 +81,12 @@
   border-bottom: 0;
   h2 {
     margin: 0;
-    font-size: @font-size-large;
+    font-size: @t3-font-size-bigger;
     line-height: 1.275;
-    font-weight: 600;
+    font-weight: 700;
     a {
-
       // Link states
       &:hover, &:active, &:focus {
-
         text-decoration: none;
       }
     }
@@ -103,8 +110,9 @@
   }
   .item-image img,
   .pull-left.item-image img,
-  .pull-right.item-image img {
-    width: 100%;
+  .pull-right.item-image img,
+  .img_caption {
+    width: 100% !important;
     max-width: 100%;
   }
 }
@@ -138,13 +146,13 @@
 .magazine-leading {
   margin-bottom: @t3-global-margin;
   .magazine-item {
+    margin-bottom: @t3-global-margin;
     // Titles
     .page-header h2 {
-      font-size: @font-size-h1;
+      font-size: @font-size-h2;
     }
     // Images
     .item-image {
-      margin-bottom: @t3-global-margin / 2;
       max-height: @line-height-computed * 15;
     }
     // Intro Text
@@ -158,7 +166,9 @@
 // Intro Items
 // ----------------------------
 .magazine-intro {
+  margin-bottom: @t3-global-margin;
   .magazine-item {
+    margin-bottom: @t3-global-margin;
     // Images
     .item-image {
       max-height: @line-height-computed * 6;
@@ -171,12 +181,42 @@
 }
 
 
+// Links Item
+// ----------------------------
+.magazine-links {
+  margin-top: @t3-global-margin * 2;
+  &::before {
+    display: inline-block;
+    content: "MORE NEWS";
+    background: @gray-dark;
+    font-weight: normal;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .link-item {
+    border-bottom: 1px solid @t3-border-color;
+    padding: (@t3-global-padding/2) 0 ((@t3-global-padding/2) - 1px);
+  }
+  .page-header {
+    margin: 0;
+    h2 {
+      font-size: @t3-font-size-bigger;
+    }
+  }
+  // Metadata {
+  .article-aside {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+
 
 //
 // Magazine Featured
 // --------------------------------------------------------
 .magazine-featured {
-  margin-bottom: @t3-global-margin * 2;
 }
 
 
@@ -191,38 +231,14 @@
 // Featured Intro Items
 // ----------------------------
 .magazine-featured-intro {
-  clear: both;
-  .magazine-item {
-    display: block;
-    float: left;
-    margin-top: @t3-global-margin;
-    overflow: hidden;
-  }
 }
 
 
 // Featured Intro Links
 // ----------------------------
 .magazine-featured-links {
-  margin-bottom: @t3-global-margin;
-  &::before {
-    display: inline-block;
-    content: "MORE NEWS";
-    background: @gray-dark;
-    font-weight: normal;
-    padding: 5px 10px;
-    color: #fff;
-  }
-  .link-item {
-    border-bottom: 1px solid @t3-border-color;
-    padding: (@t3-global-padding / 2) 0;
-  }
-  .page-header {
-    margin: 0;
-    h2 {
-      font-size: @t3-font-size-bigger;
-    }
-  }
+  margin-top: 0;
+  margin-bottom: @t3-global-margin * 2;
 }
 
 
@@ -257,14 +273,21 @@
   // Images
   .magazine-item {
     .item-image {
-      margin-top: 5px;
+    }
+  }
+
+  // Metadata 
+  .magazine-item {
+    // Hide Category Info
+    .category-name {
+      display: none;
     }
   }
 
   // Text Intro
   .magazine-item-ct {
     color: @gray;
-    font-size: @font-size-small;
+    font-size: @t3-font-size-smaller;
   }
 }
 

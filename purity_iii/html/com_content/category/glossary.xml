@@ -59,6 +59,24 @@
                 <option value="1">JSHOW</option>
             </field>
 
+            <field name="show_navigation" type="list"
+                   description="TPL_SHOW_NAVIGATION_DESC"
+                   label="TPL_SHOW_NAVIGATION_LABEL"
+                   default="1"
+                    >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_empty_group" type="list"
+                   description="TPL_SHOW_EMPTY_GROUP_DESC"
+                   label="TPL_SHOW_EMPTY_GROUP_LABEL"
+                   default="0"
+                    >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
 		</fieldset>
 	</fields>
 </metadata>

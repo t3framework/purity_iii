@@ -95,11 +95,14 @@ h2.article-title,
 // --------------------------
 .jumbotron {
 
+  padding: @jumbotron-padding (@jumbotron-padding/2);
+
   h1, h2, h3 {
     margin-top: 0;
   }
 
   p {
+    color: @gray;
     // Remove margin on last paragraph
     &:last-child {
       margin-bottom: 0;
@@ -108,6 +111,10 @@ h2.article-title,
 
   .container & {
     border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  .btn {
+    margin-top: @line-height-computed;
   }
 
   @media screen and (min-width: @grid-float-breakpoint) {
@@ -120,34 +127,11 @@ h2.article-title,
 }
 
 
-// Jumbotron Primary (jumbotron.less)
-// --------------------------
-.jumbotron-primary {
-  background-color: @brand-primary;
-  color: lighten(@brand-primary, 50%);
-  h1, h2, h3 {
-    color: @white;
-  }
-  p {
-    color: @white;
-  }
-  .btn-primary {
-    border-color: #fff;
-  }
-}
-
-
-// Page Mashead
-// --------
-.page-masthead {
-  .clearfix();
-}
-
-
 // Mashead
 // --------
 .masthead {
-  padding: (@t3-global-padding * 2) 0;
+  padding-top: (@t3-global-padding * 2);
+  padding-bottom: (@t3-global-padding * 2);
   text-align: center;
 
   p {
@@ -158,10 +142,11 @@ h2.article-title,
   }
 
   @media screen and (min-width: @grid-float-breakpoint) {
-    padding: (@t3-global-padding * 4) 0;
+    padding-top: (@t3-global-padding * 4);
+    padding-bottom: (@t3-global-padding * 4);
 
     h1 {
-      font-size: @font-size-h1 * 3;
+      font-size: @font-size-h1 * 2;
     }
 
     p {
@@ -170,12 +155,48 @@ h2.article-title,
 
     // Bigger mashead btn
     .btn-lg {
-      margin-top: @line-height-computed;
-      padding: 18px 42px;
-      font-size: @font-size-base * 1.5;
+      padding: 15px 40px;
+      font-size: @font-size-h3;
     }
   }
 
+}
+
+
+// T3 Jumbotron Primary
+// --------------------
+.jumbotron-primary {
+  background-color: @brand-primary;
+  h1, h2, h3 {
+    color: @white;
+  }
+  p {
+    color: lighten(@brand-primary, 50%);
+  }
+  .btn-primary {
+    border-color: #fff;
+  }
+}
+
+
+// Page Mashead
+// ------------
+.page-masthead {
+  .clearfix();
+  .jumbotron {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: @t3-global-padding * 3;
+    padding-bottom: @t3-global-padding * 3;
+    // Smaller Padding on Mobile
+    @media screen and (max-width: @grid-float-breakpoint) {
+      padding-top: @t3-global-padding * 2;
+      padding-bottom: @t3-global-padding * 2;
+      .container {
+        padding: 0;
+      }
+    }
+  }
 }
 
 
@@ -188,7 +209,7 @@ h2.article-title,
 // --------------------
 
 .label {
-
+  border-radius: @border-radius-base;
   // Add hover effects, but only for links
   &[href] {
     &:hover,
@@ -264,6 +285,8 @@ a.badge {
 
 // Mixin and adjust the regular image class
 .thumbnail {
+  padding: 0;
+  margin-bottom: @t3-global-margin * 2;
   > img {
   }
 }
@@ -509,7 +532,8 @@ a.list-group-item {
 // --------------------------------------------------
 // Base class
 .well {
-  blockquote {
+  blockquote,
+  p {
   }
 }
 

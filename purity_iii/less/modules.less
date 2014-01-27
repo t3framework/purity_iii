@@ -96,11 +96,16 @@
   }
   
   .nav > li {
+    border-top: 1px solid @t3-border-color;
+    margin-top: 0;
+    &:first-child {
+      border-top: 0;
+    }
   }
   
   .nav > li > a,
   .nav > li > .separator {
-    padding: @padding-base-vertical @padding-base-horizontal;
+    padding: (@t3-global-padding/2);
     display: block;
   }
 
@@ -110,6 +115,10 @@
   
   // Active state
   .nav > li.active > a {
+    .caret {
+      border-top-color: @white;
+      border-bottom-color: @white;
+    }
   }
 }
 
@@ -293,36 +302,61 @@ ul.latestusers {
 
   ul > li {
     background: @gray-lighter;
-    border-radius: 5px;
+    border-radius: 3px;
     color: @gray;
     display: block;
     float: left;
     margin: 0 5px 5px 0;
     padding: 3px 10px;
 
+    & > a {
+      color: @gray;
+    }
+
+    .tag-count {
+      background: transparent;
+      color: @gray;
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    // Tag hover
     &:hover {
-      background: @link-color;
+      background: @brand-primary;
       color: @white;
+
+      a {
+        color: @white;
+        text-decoration: none;
+      }
+
+      .tag-count {
+        color: @white;
+      }
+
     }
   }
 
-  ul > li > a {
-    color: @gray;
 
-    // Links states
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
+  // Tag could
+  // -----------------------------
+  &.tagscloud {
+    .tag {
+      background: @gray-lighter;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+
+      a {
+        color: @gray;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+        }
+      }
     }
-  }
-
-  ul > li > .tag-count {
-    background: transparent;
-    color: @gray;
-    display: inline;
-    margin: 0;
-    padding: 0;
   }
 
 }

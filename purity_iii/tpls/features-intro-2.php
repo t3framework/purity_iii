@@ -22,7 +22,6 @@ defined('_JEXEC') or die;
 <head>
 	<jdoc:include type="head" />
 	<?php $this->loadBlock('head') ?>
-	<?php $this->addCss('layouts/features-intro') ?>
 </head>
 
 <body>

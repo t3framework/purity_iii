@@ -33,7 +33,7 @@
   // Global Menu Inner padding
   // -------------------------
   .mega-inner {
-    padding: 10px 0;
+    padding: @t3-global-padding 0;
   }
 
   // Inner Padding for 1 column
@@ -52,14 +52,15 @@
   }
 
   .row + .row  {
-    padding-top: @t3-global-padding / 2;
-    border-top: 1px solid @hr-border;
+    padding-top: @t3-global-padding/2;
+    border-top: 1px solid lighten(@dropdown-bg,5%);
   }
 
 
   // The Dropdown
   // ------------
   .mega-dropdown-menu {
+    color: @gray-lightest;
   }
 
 
@@ -72,6 +73,7 @@
   // The Group
   // ---------
   .mega-group {
+    border: 0 !important;
   }
 
   // Group Title
@@ -134,13 +136,24 @@
 
   .mega-nav > li,
   .dropdown-menu .mega-nav > li {
+    border-bottom: 1px solid lighten(@dropdown-bg, 5%);
+    &:first-child {
+      border-top: 1px solid lighten(@dropdown-bg, 5%);
+    }
   }
 
   .mega-nav > li a,
   .dropdown-menu .mega-nav > li a {
+    padding: @t3-global-padding / 2;
+    color: @gray-lighter;
   }
 
   .dropdown-menu .mega-nav > li .separator {
+  }
+
+  .mega-nav > li.open > a,
+  .dropdown-menu .mega-nav > li.open > a {
+    background: @dropdown-link-hover-bg
   }
 
   // Nav in Group
@@ -177,8 +190,9 @@
 
   // Module Title
   .t3-module .module-title {
+    color: @gray-lighter;
     .dropdown-header(); // Make the Module Title look like Dropdown Header
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   // Module Content
@@ -189,6 +203,7 @@
   // Reset List Style in Module
   .t3-module ul,
   .t3-module .nav {
+    padding-left: @t3-global-padding;
   }
 
   .t3-module ul li,
@@ -211,14 +226,19 @@
     background: none;
     font: inherit;
     white-space: normal;
+    color: @gray-lightest;
+
     // Link states
     &:hover, &:focus, &:active {
       background: none;
-      color: inherit;
+      color: @link-color;
       font: inherit;
     }
   }
-  
+
+  // Reset Link Style in Module
+  a:hover, &:focus, a:active {
+  }
   // Nav in Module
   .dropdown-menu .t3-module .nav {
   }

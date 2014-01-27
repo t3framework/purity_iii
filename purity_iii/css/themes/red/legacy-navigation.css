@@ -24,11 +24,10 @@
   border-color: transparent;
   border-style: solid;
   border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
+  border-left-color: #111111;
   margin-top: 5px;
   margin-right: -5px;
 }
 .dropdown-submenu:hover > a:after {
-  border-left-color: #262626;
+  border-left-color: #ffffff;
 }
-

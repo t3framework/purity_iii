@@ -20,7 +20,7 @@ $has_intro_image = (isset($images->image_intro) && !empty($images->image_intro))
 
 ?>
 
-<div class="row-fluid feature-row <?php echo $attribs->get('extra-class') ?> clearfix">
+<div class="row-feature <?php echo $attribs->get('extra-class') ?> clearfix">
 
 	<div class="container<?php echo $this->item->state == 0 ? ' system-unpublished' : null; ?>">
 

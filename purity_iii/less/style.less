@@ -22,15 +22,8 @@
 // Logo
 // ----
 .logo {
-
   padding: 0;
   margin: 0;
-  text-align: center;
-
-  // Left align the logo on  Tablets / Desktop
-  @media screen and (min-width: @screen-sm) {
-    text-align: left;
-  }
 
   a {
     display: inline-block;
@@ -50,13 +43,17 @@
   }
 }
 
+
 // Logo Text
 // ----------
 .logo-text {
   text-transform: uppercase;
   font-size: @font-size-large;
+  position: absolute;
+  top: 0;
+  left: 0;
   a {
-    background: @navbar-default-border;
+    background: transparent;
     color: #fff;
     text-decoration: none;
     line-height: @navbar-height;
@@ -67,6 +64,7 @@
   a:hover,
   a:active,
   a:focus {
+    background: @navbar-default-border;
     color: @navbar-default-link-hover-color;
     text-decoration: none;
   }
@@ -78,20 +76,51 @@
 
 }
 
+// Different Style on Tablets / Desktop
+@media screen and (min-width: @grid-float-breakpoint) {
+  .logo-text {
+    position: static;
+    a {
+      background: @navbar-default-border;
+    }
+
+    &:hover a,
+    a:hover,
+    a:active,
+    a:focus {
+      color: @navbar-default-link-hover-color;
+    }
+  }
+}
+
+
+// Logo Position when Off-Canvas enable
+// ------------------------------------
+.off-canvas-toggle + .container .navbar-header .logo {
+  left: @navbar-height;
+  border-left: 1px solid @navbar-default-border;
+  // Remove border on Tablets / Desktop
+  @media screen and (min-width: @grid-float-breakpoint) {
+    border-left: 0;
+  }
+}
+
+
+
 // Head Search
 // -----------
 .head-search {
-  margin: 0;
+  float: right;
   height: @navbar-height;
   position: relative;
+  margin: 0;
   z-index: 1000;
-  border-left: 1px solid @navbar-default-border;
-  border-right: 1px solid @navbar-default-border;
-  .clearfix();
 
-  // Float to left on Tablets / Desktop
-  @media screen and (min-width: @screen-sm) {
-    float: right;
+  // Absolute position to right on Tablets / Desktop
+  @media screen and (min-width: @grid-float-breakpoint) {
+    position: absolute;
+    right: 20px;
+    top: 0;
   }
 
   form {
@@ -103,45 +132,47 @@
   }
   
   .search {
+    background: transparent;
+    border-left: 1px solid @navbar-default-border;
+    border-right: 1px solid @navbar-default-border;
     position: relative;
+    // Has background on Tablets / Desktop
+    @media screen and (min-width: @grid-float-breakpoint) {
+      background: @navbar-default-border;
+    }
     // Place a search icon
-    &:before {
-      font-family: "FontAwesome";
+    .fa-search {
+      color: @navbar-default-color;
       content: "\f002";
       display: block;
+      font-family: "FontAwesome";
       position: absolute;
       left: 20px;
-      top: 20px;
-      color: @navbar-default-color;
+      top: 19px;
     }
   }
   
   .form-control {
-    width: 100%;
-    padding: 0 15px 0 40px;
-    border: none;
-    margin: 0;
-    background: @navbar-default-border;
+    border: 0;
+    background: transparent;
     color: @navbar-default-color;
     height: @navbar-height;
+    position: relative;
+    margin: 0;
+    padding: 0 15px 0 40px;
+    width: 0;
     .transition(width .2s);
-
+    // States
     &:hover, &:active, &:focus {
+      color: @navbar-default-link-hover-color;
       box-shadow: none;
     }
-
-    // Width Control on Tablets / Desktop
-    @media screen and (min-width: @screen-sm) {
-      width: 0;
-      // focus state
-      &:focus {
-        width: 200px;
-        color: @navbar-default-link-hover-color;
-      }
+    &:active, &:focus {
+      width: 180px;
     }
-
   }
 
+// End
 }
 
 

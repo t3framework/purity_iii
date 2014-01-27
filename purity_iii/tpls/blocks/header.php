@@ -32,12 +32,7 @@ if (!$sitename) {
 
 		<!-- NAVBAR HEADER -->
 		<div class="navbar-header">
-			<?php if ($this->getParam('navigation_collapse_enable', 1) && $this->getParam('responsive', 1)) : ?>
-				<?php $this->addScript(T3_URL.'/js/nav-collapse.js'); ?>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
-					<i class="fa fa-bars"></i>
-				</button>
-			<?php endif ?>
+
 			<!-- LOGO -->
 			<div class="logo logo-<?php echo $logotype ?>">
 				<a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
@@ -48,6 +43,22 @@ if (!$sitename) {
 				</a>
 			</div>
 			<!-- //LOGO -->
+
+			<?php if ($this->getParam('navigation_collapse_enable', 1) && $this->getParam('responsive', 1)) : ?>
+				<?php $this->addScript(T3_URL.'/js/nav-collapse.js'); ?>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			<?php endif ?>
+
+	    <?php if ($this->countModules('head-search')) : ?>
+	    <!-- HEAD SEARCH -->
+	    <div class="head-search<?php $this->_c('head-search')?>">     
+	      <jdoc:include type="modules" name="<?php $this->_p('head-search') ?>" style="raw" />
+	    </div>
+	    <!-- //HEAD SEARCH -->
+	    <?php endif ?>
+
 		</div>
 		<!-- //NAVBAR HEADER -->
 
@@ -59,14 +70,6 @@ if (!$sitename) {
 		<nav class="t3-navbar navbar-collapse collapse">
 			<jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
 		</nav>
-
-    <?php if ($this->countModules('head-search')) : ?>
-    <!-- HEAD SEARCH -->
-    <div class="head-search<?php $this->_c('head-search')?>">     
-      <jdoc:include type="modules" name="<?php $this->_p('head-search') ?>" style="raw" />
-    </div>
-    <!-- //HEAD SEARCH -->
-    <?php endif ?>
     <!-- //NAVBAR MAIN -->
 
 	</div>

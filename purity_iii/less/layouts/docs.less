@@ -1,0 +1,116 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+//
+// DEMO TYPOGRAPHY
+// --------------------------------------------------------
+// Used for Typography Page. Removed if you don't want it :)
+
+.docs-section {
+  margin-bottom: @t3-global-margin * 2;
+  .page-header {
+    margin-bottom: @t3-global-margin;
+    h1 {
+      font-size: floor(@font-size-base * 3);
+    }
+  }
+}
+
+
+// Core Typo
+// ----------------
+.example-type {
+  h1,h2,h3,h4,h5,h6 {
+    margin: @t3-global-margin 0;
+  }
+}
+
+
+// Color Swatches
+// ----------------
+.example-colors {
+  .swatch-item {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    background: @gray-dark;
+    color: #fff;
+    margin-bottom: @t3-global-margin;
+    dl {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      margin: 0;
+    }
+  }
+  // The colors
+  .color-brand-primary {
+    background: @brand-primary;
+  }
+  .color-brand-secondary {
+    background: @brand-secondary;
+  }
+  .color-brand-success {
+    background: @brand-success;
+  }
+  .color-brand-danger {
+    background: @brand-danger;
+  }
+  .color-brand-warning {
+    background: @brand-warning;
+  }
+  .color-brand-info {
+    background: @brand-info;
+  }
+  // TGrayscale Levels
+  .color-gray-darker {
+    background: @gray-darker;
+  }
+  .color-gray-dark {
+    background: @gray-dark;
+  }
+  .color-gray {
+    background: @gray;
+  }
+  .color-gray-light {
+    background: @gray-light;
+    color: @gray-dark;
+  }
+  .color-gray-lighter {
+    background: @gray-lighter;
+    color: @gray-dark;
+  }
+  .color-gray-lightest {
+    background: @gray-lightest;
+    color: @gray-dark;
+  }
+}
+
+
+// Forms
+// ----------------
+.example-buttons,
+.example-inputs {
+  .btn,
+  .form-control {
+    width: 100%;
+    margin-bottom: @t3-global-margin;
+  }
+}

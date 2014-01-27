@@ -37,6 +37,16 @@ $i         = 0;
 	</div>
 <?php endif; ?>
 
+<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
+	<div class="page-subheader">
+		<h2> <?php echo $this->escape($this->params->get('page_subheading')); ?>
+			<?php if ($this->params->get('show_category_title')) : ?>
+				<span class="subheading-category"><?php echo $this->category->title;?></span>
+			<?php endif; ?>
+		</h2>
+	</div>
+<?php endif; ?>
+
 <div class="magazine-category">
 	<?php if (count($this->lead_items)): ?>
 		<div class="magazine-leading">

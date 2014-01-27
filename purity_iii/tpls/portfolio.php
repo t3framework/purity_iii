@@ -27,7 +27,7 @@ defined('_JEXEC') or die;
 
 <body>
 
-<div class="t3-wrapper product-intro"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+<div class="t3-wrapper porfolio"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
 
 	<?php $this->loadBlock('header') ?>
 

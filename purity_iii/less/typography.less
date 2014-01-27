@@ -28,11 +28,11 @@ p {
 
 .lead {
   margin-bottom: @line-height-computed;
-  font-size: (@font-size-base * 1.15);
+  font-size: @t3-font-size-bigger;
   font-weight: 200;
   line-height: 1.4;
-  @media (min-width: 768px) {
-    font-size: (@font-size-base * 1.5);
+  @media (min-width: @screen-md) {
+    font-size: @font-size-large;
   }
 }
 
@@ -59,6 +59,16 @@ cite    { font-style: normal; }
 .text-right          { text-align: right; }
 .text-center         { text-align: center; }
 .text-justify        { text-align: justify; }
+
+.text-center .item-image img  { margin: 0 auto; }
+
+.inline {
+  display: inline-block;
+}
+
+.inline + .inline {
+  margin-left: @t3-global-margin;
+}
 
 // Highlight
 .highlight {
@@ -100,15 +110,15 @@ h6 {
   margin-bottom: (@line-height-computed / 2);
 }
 
-h1, .h1 { font-size: floor(@font-size-base * 3); } // ~42px
-h2, .h2 { font-size: floor(@font-size-base * 2.15); } // ~30px
-h3, .h3 { font-size: ceil(@font-size-base * 1.70); } // ~24px
-h4, .h4 { font-size: ceil(@font-size-base * 1.25); } // ~18px
-h5, .h5 { font-size: @font-size-base; }
-h6, .h6 { font-size: ceil(@font-size-base * 0.85); } // ~12px
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; } 
 
-h1 small, .h1 small { font-size: ceil(@font-size-base * 1.70); } // ~24px
-h2 small, .h2 small { font-size: ceil(@font-size-base * 1.25); } // ~18px
+h1 small, .h1 small { font-size: ceil(@font-size-base * 1.70); }
+h2 small, .h2 small { font-size: ceil(@font-size-base * 1.25); }
 h3 small, .h3 small,
 h4 small, .h4 small { font-size: @font-size-base; }
 
@@ -215,7 +225,7 @@ blockquote {
   p {
     font-size: (@font-size-base * 1.25);
     font-weight: 300;
-    line-height: 1.25;
+    line-height: 1.5;
   }
   p:last-child {
     margin-bottom: 0;
@@ -290,54 +300,3 @@ code {
 // Blocks of code
 pre {
 }
-
-
-
-//
-// DEMO TYPOGRAPHY
-// --------------------------------------------------------
-// Used for Typography Page. Removed if you don't want it :)
-
-.bs-docs-section {
-  margin-bottom: @t3-global-margin * 2;
-  .page-header {
-    margin-bottom: @t3-global-margin;
-    h1 {
-      font-size: floor(@font-size-base * 3);
-    }
-  }
-}
-
-.bs-example-type {
-  h1,h2,h3,h4,h5,h6 {
-    margin: @t3-global-margin 0;
-  }
-}
-
-.bs-example {
-
-  .btn-toolbar {
-    margin-bottom: @t3-global-margin / 2;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    > button,
-    > .btn-group {
-      display: inline-block;
-      vertical-align: bottom;
-      margin-bottom: @t3-global-margin / 2;
-    }
-    .btn-group {
-      float: none;
-    }
-    > .btn + .btn,
-    > .btn-group + .btn,
-    > .btn + .btn-group,
-    > .btn-group + .btn-group {
-      margin-left: 8px;
-    }
-  }
-}
-
-
-

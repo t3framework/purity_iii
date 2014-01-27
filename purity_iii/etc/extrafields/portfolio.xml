@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="attribs">
+    <fieldset name="extra-fields" label="Extra Fields" description="Extra Fields" group="extrafields">
+        <field name="portfolio-state" type="list" default="" label="Special State"
+               description="Product Special State">
+            <option value="">None</option>
+            <option value="current">Current</option>
+            <option value="hot">Hot</option>
+            <option value="free">Free</option>
+        </field>
+        <field name="portfolio-demo" type="text" class="input-xxlarge" default="" label="Demo Link" description="Product demo link" />
+    </fieldset>
+</fields>
+</form>

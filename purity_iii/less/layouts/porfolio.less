@@ -62,6 +62,7 @@
     float: none !important;
     border: 1px solid @t3-border-color;
     padding: 3px;
+    position: relative;
     .transition(border-color 0.2s ease-in);
     img {
       width: 100%;
@@ -95,3 +96,31 @@
   }
 
 }
+
+
+// Porfolio Extra Fields
+// ---------------------
+.porfolio {
+  // State
+  .item-state {
+    width: 70px;
+    height: 70px;
+    background: url(../../images/porfolio-item-states.png) no-repeat center top;
+    display: block;
+    text-indent: -9999em;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+  }
+  .state-free {
+    background-position: center;
+  }
+  .state-hot {
+    background-position: center bottom;
+  }
+  // Demo URL
+  .item-demo-url {
+    margin-top: @t3-global-margin / 2;
+  }
+}
+

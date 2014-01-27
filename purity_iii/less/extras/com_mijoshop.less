@@ -1,3 +1,6 @@
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
 .com_mijoshop {
 
   // General
@@ -6,7 +9,7 @@
   }
 
   .buttons {
-    padding: @t3-global-padding/2 @t3-global-padding;
+    padding: (@t3-global-padding/2) @t3-global-padding;
   }
 
   // Header 
@@ -25,7 +28,7 @@
     }
 
     #currency {
-      font-size: 15px;
+      font-size: (@font-size-base + 1);
       font-weight: bold;
       top: 8px;
 
@@ -59,7 +62,7 @@
   .product-grid {
     .clearfix();
     width: auto;
-    margin: 0 -10px -20px;
+    margin: 0 -(@t3-global-margin/2) -(@t3-global-margin);
 
     > div {
       float: left;
@@ -68,9 +71,9 @@
       margin-bottom: 20px;
 
       > div {
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 10px;
+        margin-right: @t3-global-margin/2;
+        margin-left: @t3-global-margin/2;
+        margin-bottom: @t3-global-margin/2;
       }
 
       img {
@@ -84,7 +87,7 @@
   }
 
   .box_oc .box-content {
-    padding: 20px;
+    padding: @t3-global-padding;
   }
 
   // Product Info
@@ -104,8 +107,8 @@
     .price,
     .cart,
     .review {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: @t3-global-padding;
+      padding-right: @t3-global-padding;
     }
 
     .review {
@@ -135,8 +138,8 @@
   }
 
   .tab-content {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: @t3-global-padding;
+    padding-right: @t3-global-padding;
   }
 
   // Footer 

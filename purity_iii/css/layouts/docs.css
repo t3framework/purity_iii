@@ -1,0 +1,80 @@
+
+
+.docs-section {
+  margin-bottom: 40px;
+}
+.docs-section .page-header {
+  margin-bottom: 20px;
+}
+.docs-section .page-header h1 {
+  font-size: 42px;
+}
+.example-type h1,
+.example-type h2,
+.example-type h3,
+.example-type h4,
+.example-type h5,
+.example-type h6 {
+  margin: 20px 0;
+}
+.example-colors .swatch-item {
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+  background: #444444;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.example-colors .swatch-item dl {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  margin: 0;
+}
+.example-colors .color-brand-primary {
+  background: #0077bb;
+}
+.example-colors .color-brand-secondary {
+  background: #3e9b52;
+}
+.example-colors .color-brand-success {
+  background: #3e9b52;
+}
+.example-colors .color-brand-danger {
+  background: #cc0000;
+}
+.example-colors .color-brand-warning {
+  background: #ff8800;
+}
+.example-colors .color-brand-info {
+  background: #0099cc;
+}
+.example-colors .color-gray-darker {
+  background: #222222;
+}
+.example-colors .color-gray-dark {
+  background: #444444;
+}
+.example-colors .color-gray {
+  background: #666666;
+}
+.example-colors .color-gray-light {
+  background: #999999;
+  color: #444444;
+}
+.example-colors .color-gray-lighter {
+  background: #eeeeee;
+  color: #444444;
+}
+.example-colors .color-gray-lightest {
+  background: #f7f7f7;
+  color: #444444;
+}
+.example-buttons .btn,
+.example-inputs .btn,
+.example-buttons .form-control,
+.example-inputs .form-control {
+  width: 100%;
+  margin-bottom: 20px;
+}

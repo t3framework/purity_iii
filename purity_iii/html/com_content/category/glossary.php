@@ -95,20 +95,34 @@ function clean_special_chars ($s, $d=false) {
 
 
 <?php if ($params->get ('show_navigation', 1)) : ?>
-	<nav class="glossary-nav">
-		<ul class="nav nav-pills">
-		<?php foreach ($groups as $group => $group_items): ?>
-			<?php if (count ($group_items) || !$params->get ('hide_empty_group', 1)) : ?>
-			<li><a href="#<?php echo $group ?>"><?php echo $group ?></a></li>
-			<?php endif ?>
-		<?php endforeach ?>
-		</ul>
-	</nav>
+	<div class="glossary-nav">
+		<nav class="container">
+			<ul class="nav nav-pills">
+			<?php foreach ($groups as $group => $group_items): ?>
+				<?php if (count ($group_items) || $params->get ('show_empty_group', 0)) : ?>
+				<li><a href="#<?php echo $group ?>"><?php echo $group ?></a></li>
+				<?php endif ?>
+			<?php endforeach ?>
+			</ul>
+		</nav>
+	</div>
+
+	<script type="text/javascript">
+		!function($) {
+			$('.glossary-nav nav').affix({
+				offset:{
+					top: function(){
+						return $('#t3-content').offset().top - $('#t3-mainnav').height();
+					}
+				}
+			});
+		} (jQuery);
+	</script>
 <?php endif ?>
 
 <div class="glossary-items">
 <?php foreach ($groups as $group=>$group_items) : ?>
-	<?php if (count ($group_items) || !$params->get ('hide_empty_group', 1)) {
+	<?php if (count ($group_items) || $params->get ('show_empty_group', 0)) {
 		$this->group = $group;
 		$this->group_items = $group_items;
 		echo $this->loadTemplate ('group');
