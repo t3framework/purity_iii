@@ -1,4 +1,4 @@
-Third party extensions compatible - contributed by community
+Third party extensions compatible
 ==============
 
 Purity III is a free Joomla template available for everyone to download. It’s also highly compatible 
