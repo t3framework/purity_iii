@@ -95,7 +95,7 @@ h2.article-title,
 // --------------------------
 .jumbotron {
 
-  padding: @jumbotron-padding (@jumbotron-padding/2);
+  .clearfix();
 
   h1, h2, h3 {
     margin-top: 0;
@@ -115,6 +115,7 @@ h2.article-title,
 
   .btn {
     margin-top: @line-height-computed;
+    margin-bottom: @line-height-computed;
   }
 
   @media screen and (min-width: @grid-float-breakpoint) {
@@ -141,18 +142,15 @@ h2.article-title,
     }
   }
 
-  @media screen and (min-width: @grid-float-breakpoint) {
+  @media screen and (min-width: @screen-md) {
     padding-top: (@t3-global-padding * 4);
     padding-bottom: (@t3-global-padding * 4);
-
     h1 {
       font-size: @font-size-h1 * 2;
     }
-
     p {
       font-size: @font-size-base * 2;
     }
-
     // Bigger mashead btn
     .btn-lg {
       padding: 15px 40px;
@@ -188,8 +186,10 @@ h2.article-title,
     margin-bottom: 0 !important;
     padding-top: @t3-global-padding * 3;
     padding-bottom: @t3-global-padding * 3;
+    padding-left: 0;
+    padding-right: 0;
     // Smaller Padding on Mobile
-    @media screen and (max-width: @grid-float-breakpoint) {
+    @media screen and (max-width: @screen-md) {
       padding-top: @t3-global-padding * 2;
       padding-bottom: @t3-global-padding * 2;
       .container {

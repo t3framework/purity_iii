@@ -359,16 +359,21 @@ output {
 // --------------------------------------------------
 .btn-actions {
   .btn-lg {
-    font-size: @font-size-h3;
-    padding: 10px 30px;
-    text-align: center;
-    border-radius: 30px;
+    font-size: @font-size-large;
+    padding: 10px 20px;
+    border-radius: 20px;
   }
   .btn + .btn {
     margin-left: 20px;
   }
+  @media screen and (min-width: @screen-sm) {
+    .btn-lg {
+      font-size: @font-size-h3;
+      padding: 10px 30px;
+      border-radius: 30px;
+    }
+  }
 }
-
 
 
 

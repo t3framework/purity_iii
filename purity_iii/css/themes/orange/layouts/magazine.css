@@ -101,8 +101,10 @@
 .magazine-leading .magazine-item .page-header h2 {
   font-size: 35px;
 }
-.magazine-leading .magazine-item .item-image {
-  max-height: 300px;
+@media screen and (min-width: 768px) {
+  .magazine-leading .magazine-item .item-image {
+    max-height: 300px;
+  }
 }
 .magazine-leading .magazine-item .magazine-item-ct {
   font-size: 16px;

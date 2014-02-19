@@ -130,6 +130,7 @@ function clean_special_chars ($s, $d=false) {
 <?php endforeach ?>
 </div>
 
+<?php if ($params->get('show_detail_in_popup', 1)): ?>
 <!-- Modal -->
 <div class="modal fade" id="glossary-detail" tabindex="-1" role="dialog" aria-labelledby="glossary-detail-label" aria-hidden="true">
 	<div class="modal-dialog">
@@ -165,3 +166,4 @@ function clean_special_chars ($s, $d=false) {
 		})
 	} (jQuery);
 </script>
+<?php endif ?>

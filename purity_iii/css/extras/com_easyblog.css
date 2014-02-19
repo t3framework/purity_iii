@@ -1,0 +1,8 @@
+
+#eblog-wrapper .btn-eb-navbar {
+  height: 30px;
+  width: 44px;
+}
+#eblog-wrapper #eblog-search .search-input input {
+  height: 30px !important;
+}

@@ -30,3 +30,10 @@
 .blog .blog-item .article-intro {
   margin-bottom: 20px;
 }
+.blog .item-page .tags {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 20px;
+}
+.blog .item-page .tags span a {
+  background: #eeeeee;
+}

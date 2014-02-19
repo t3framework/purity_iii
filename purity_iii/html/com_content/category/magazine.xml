@@ -23,11 +23,11 @@
 
 	<!-- Add fields to the parameters object for the layout. -->
 	<fields name="params">
-		<fieldset name="basic" label="TPL_MN_MAGAZINE_ENTRY_LABEL">
+		<fieldset name="basic" label="TPL_MAGAZINE_HOME_LABEL">
 			<field name="layout_type" type="hidden" default="blog"/>
 
-			<field name="magazine_layout" type="spacer" class="text"
-						 label="TPL_MN_MAGAZINE_ENTRY_CONFIG_LABEL"
+			<field name="magazine_home_feature" type="spacer" class="text"
+						 label="TPL_MAGAZINE_HOME_FEATURE_CONFIG_LABEL"
 				/>
 
 			<field name="featured_leading" type="text"
@@ -45,101 +45,91 @@
 				/>
 
 			<field name="featured_intro_columns" type="text"
-						 description="TPL_MN_MAGAZINE_FEATURED_NUM_COLUMNS_DESC"
-						 label="TPL_MN_MAGAZINE_FEATURED_NUM_COLUMNS_LABEL"
+						 description="TPL_MAGAZINE_FEATURED_NUM_COLUMNS_DESC"
+						 label="TPL_MAGAZINE_FEATURED_NUM_COLUMNS_LABEL"
 						 size="3"
 						 default="3"
 				/>
 
 			<field name="featured_links" type="text"
-						 description="TPL_MN_MAGAZINE_FEATURED_NUM_LINKS_DESC"
-						 label="TPL_MN_MAGAZINE_FEATURED_NUM_LINKS_LABEL"
+						 description="TPL_MAGAZINE_FEATURED_NUM_LINKS_DESC"
+						 label="TPL_MAGAZINE_FEATURED_NUM_LINKS_LABEL"
 						 size="3"
 						 default="5"
 				/>
 
-			<field name="highlight_desc" type="spacer" class="text"
-						 label="TPL_MN_MAGAZINE_HIGHLIGHT_CONFIG_LABEL"
+			<field name="magazine_home_category_list" type="spacer" class="text"
+						 label="TPL_MAGAZINE_HOME_CATEGORY_LIST_CONFIG_LABEL"
 				/>
 
 			<field name="highlight_count" type="text"
-						 description="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_ARTICLE_DESC"
-						 label="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_ARTICLE_LABEL"
+						 description="TPL_MAGAZINE_HIGHLIGHT_NUM_ARTICLE_DESC"
+						 label="TPL_MAGAZINE_HIGHLIGHT_NUM_ARTICLE_LABEL"
 						 size="3"
 						 default="4"
 				/>
 
 			<field name="highlight_columns" type="text"
-						 description="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_COLUMN_DESC"
-						 label="TPL_MN_MAGAZINE_HIGHLIGHT_NUM_COLUMN_LABEL"
+						 description="TPL_MAGAZINE_HIGHLIGHT_NUM_COLUMN_DESC"
+						 label="TPL_MAGAZINE_HIGHLIGHT_NUM_COLUMN_LABEL"
 						 size="3"
 						 default="2"
 				/>
 
 			<field name="show_highlight_intro" type="list"
-						 description="TPL_MN_MAGAZINE_HIGHLIGHT_SHOW_INTRO_DESC"
-						 label="TPL_MN_MAGAZINE_HIGHLIGHT_SHOW_INTRO_LABEL"
+						 description="TPL_MAGAZINE_HIGHLIGHT_SHOW_INTRO_DESC"
+						 label="TPL_MAGAZINE_HIGHLIGHT_SHOW_INTRO_LABEL"
 						 default="1"
 				>
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
 
-			<field name="featured_info_positions" type="list"
-						 multiple="true"
-						 description="TPL_MN_MAGAZINE_ENTRY_INTRO_POSITION_DESC"
-						 label="TPL_MN_MAGAZINE_ENTRY_INTRO_POSITION_LABEL"
-				>
-				<option value=""></option>
-				<option value="leading">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_FEATURED</option>
-				<option value="intro">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_INTRO</option>
-				<option value="link">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_LINKS</option>
-				<option value="highlight">TPL_MN_MAGAZINE_ENTRY_INTRO_POS_HIGHLIGHT</option>
-			</field>
 
-			<field name="orderby_pri" type="list"
-						 description="JGLOBAL_CATEGORY_ORDER_DESC"
-						 label="JGLOBAL_CATEGORY_ORDER_LABEL"
-				>
-				<option value="">JGLOBAL_USE_GLOBAL</option>
-				<option value="none">JGLOBAL_NO_ORDER</option>
-				<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
-				<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
-				<option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
-			</field>
+            <field name="magazine_home_option" type="spacer" class="text"
+                   label="TPL_MAGAZINE_HOME_CONFIG_LABEL"
+                    />
 
-			<field name="orderby_sec" type="list"
-						 description="JGLOBAL_ARTICLE_ORDER_DESC"
-						 label="JGLOBAL_ARTICLE_ORDER_LABEL"
-				>
-				<option value="">JGLOBAL_USE_GLOBAL</option>
-				<option value="front">COM_CONTENT_FEATURED_ORDER</option>
-				<option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
-				<option value="date">JGLOBAL_OLDEST_FIRST</option>
-				<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
-				<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
-				<option value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
-				<option value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
-				<option value="hits">JGLOBAL_MOST_HITS</option>
-				<option value="rhits">JGLOBAL_LEAST_HITS</option>
-				<option value="order">JGLOBAL_ORDERING</option>
-			</field>
+            <field name="article_ordering" type="list"
+                   default="publish_up"
+                   label="JGLOBAL_ARTICLE_ORDER_LABEL"
+                   description="JGLOBAL_ARTICLE_ORDER_DESC"
+                    >
+                <option value="a.ordering">JGLOBAL_ORDERING</option>
+                <option value="fp.ordering">COM_CONTENT_FEATURED_ORDER</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.title">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="publish_up">JPUBLISHED</option>
+            </field>
 
-			<field name="order_date" type="list"
-						 description="JGLOBAL_ORDERING_DATE_DESC"
-						 label="JGLOBAL_ORDERING_DATE_LABEL"
-				>
-				<option value="">JGLOBAL_USE_GLOBAL</option>
-				<option value="created">JGLOBAL_CREATED</option>
-				<option value="modified">JGLOBAL_MODIFIED</option>
-				<option value="published">JPUBLISHED</option>
-			</field>
+            <field name="article_ordering_direction" type="list"
+                   default="DESC"
+                   label="TPL_ORDER_DIRECTION_LABEL"
+                   description="TPL_ORDER_DIRECTION_DESC"
+                    >
+                <option value="DESC">TPL_ORDER_DIRECTION_DESCENDING_VALUE</option>
+                <option value="ASC">TPL_ORDER_DIRECTION_ASCENDING_VALUE</option>
+            </field>
+
+            <field name="featured_info_positions" type="list"
+                   multiple="true"
+                   description="TPL_MAGAZINE_ENTRY_INTRO_POSITION_DESC"
+                   label="TPL_MAGAZINE_ENTRY_INTRO_POSITION_LABEL"
+                    >
+                <option value=""></option>
+                <option value="leading">TPL_MAGAZINE_ENTRY_INTRO_POS_FEATURED</option>
+                <option value="intro">TPL_MAGAZINE_ENTRY_INTRO_POS_INTRO</option>
+                <option value="link">TPL_MAGAZINE_ENTRY_INTRO_POS_LINKS</option>
+                <option value="highlight">TPL_MAGAZINE_ENTRY_INTRO_POS_HIGHLIGHT</option>
+            </field>
 
 		</fieldset>
-		<fieldset name="magazine_subcategory" label="TPL_MN_MAGAZINE_SUB_LABEL">
+		<fieldset name="magazine_subcategory" label="TPL_MAGAZINE_SUB_LABEL">
 
 			<field name="subcategory_layout" type="spacer" class="text"
-						 label="TPL_MN_MAGAZINE_SUB_CONFIG_LABEL"
+						 label="TPL_MAGAZINE_SUB_CONFIG_LABEL"
 				/>
 
 			<field name="num_leading_articles" type="text"
@@ -166,15 +156,53 @@
 						 size="3"
 				/>
 
+            <field name="orderby_pri" type="list"
+                   description="JGLOBAL_CATEGORY_ORDER_DESC"
+                   label="JGLOBAL_CATEGORY_ORDER_LABEL"
+                    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="none">JGLOBAL_NO_ORDER</option>
+                <option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+                <option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+            </field>
+
+            <field name="orderby_sec" type="list"
+                   description="JGLOBAL_ARTICLE_ORDER_DESC"
+                   label="JGLOBAL_ARTICLE_ORDER_LABEL"
+                    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="front">COM_CONTENT_FEATURED_ORDER</option>
+                <option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+                <option value="date">JGLOBAL_OLDEST_FIRST</option>
+                <option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+                <option value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+                <option value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+                <option value="hits">JGLOBAL_MOST_HITS</option>
+                <option value="rhits">JGLOBAL_LEAST_HITS</option>
+                <option value="order">JGLOBAL_ORDERING</option>
+            </field>
+
+            <field name="order_date" type="list"
+                   description="JGLOBAL_ORDERING_DATE_DESC"
+                   label="JGLOBAL_ORDERING_DATE_LABEL"
+                    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="published">JPUBLISHED</option>
+            </field>
+
 			<field name="subcat_info_positions" type="list"
 						 multiple="true"
-						 description="TPL_MN_MAGAZINE_SUB_INTRO_POSITION_DESC"
-						 label="TPL_MN_MAGAZINE_SUB_INTRO_POSITION_LABEL"
+						 description="TPL_MAGAZINE_SUB_INTRO_POSITION_DESC"
+						 label="TPL_MAGAZINE_SUB_INTRO_POSITION_LABEL"
 				>
 				<option value=""></option>
-				<option value="leading">TPL_MN_MAGAZINE_SUB_INTRO_POS_LEADING</option>
-				<option value="intro">TPL_MN_MAGAZINE_SUB_INTRO_POS_INTRO</option>
-				<option value="link">TPL_MN_MAGAZINE_SUB_INTRO_POS_LINKS</option>
+				<option value="leading">TPL_MAGAZINE_SUB_INTRO_POS_LEADING</option>
+				<option value="intro">TPL_MAGAZINE_SUB_INTRO_POS_INTRO</option>
+				<option value="link">TPL_MAGAZINE_SUB_INTRO_POS_LINKS</option>
 			</field>
 
 			<field name="show_category_title" type="list"
@@ -205,8 +233,8 @@
 			</field>
 
 			<field name="show_subcat_intro" type="list"
-						 description="TPL_MN_MAGAZINE_SUB_SHOW_INTRO_DESC"
-						 label="TPL_MN_MAGAZINE_SUB_SHOW_INTRO_LABEL"
+						 description="TPL_MAGAZINE_SUB_SHOW_INTRO_DESC"
+						 label="TPL_MAGAZINE_SUB_SHOW_INTRO_LABEL"
 						 default="1"
 				>
 				<option value="0">JHIDE</option>
@@ -242,10 +270,10 @@
 
 		</fieldset>
 
-		<fieldset name="article_options" label="TPL_MN_MAGAZINE_ARTICLE_LABEL">
+		<fieldset name="article_options" label="TPL_MAGAZINE_ARTICLE_LABEL">
 
 			<field name="article_layout" type="componentlayout"
-						 label="TPL_MN_MAGAZINE_ARTICLE_LAYOUT_LABEL"
+						 label="TPL_MAGAZINE_ARTICLE_LAYOUT_LABEL"
 						 description="JFIELD_ALT_COMPONENT_LAYOUT_DESC"
 						 useglobal="true"
 						 extension="com_content" view="article"
@@ -263,7 +291,7 @@
 
 		</fieldset>
 
-		<fieldset name="article_info_options" label="TPL_MN_MAGAZINE_ARTICLE_INFO_LABEL">
+		<fieldset name="article_info_options" label="TPL_MAGAZINE_ARTICLE_INFO_LABEL">
 
 			<field name="show_title" type="list"
 						 description="JGLOBAL_SHOW_TITLE_DESC"

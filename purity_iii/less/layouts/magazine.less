@@ -153,7 +153,11 @@
     }
     // Images
     .item-image {
-      max-height: @line-height-computed * 15;
+
+      // Larger margin on Tablet / Desktop
+      @media screen and (min-width: @screen-sm) {
+        max-height: @line-height-computed * 15;
+      } 
     }
     // Intro Text
     .magazine-item-ct {

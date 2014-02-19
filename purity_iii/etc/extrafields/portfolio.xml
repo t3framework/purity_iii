@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 <fields name="attribs">
-    <fieldset name="extra-fields" label="Extra Fields" description="Extra Fields" group="extrafields">
-        <field name="portfolio-state" type="list" default="" label="Special State"
-               description="Product Special State">
+    <fieldset name="extra-fields" label="TPL_GROUP_EXTRA_FIELDS_LABEL" description="TPL_GROUP_EXTRA_FIELDS_DESC" group="extrafields">
+        <field name="portfolio-state" type="list" default="" label="TPL_EXTRAFIELDS_PORTFOLIO_STATE_LABEL"
+               description="TPL_EXTRAFIELDS_PORTFOLIO_STATE_DESC">
             <option value="">None</option>
             <option value="current">Current</option>
             <option value="hot">Hot</option>
             <option value="free">Free</option>
         </field>
-        <field name="portfolio-demo" type="text" class="input-xxlarge" default="" label="Demo Link" description="Product demo link" />
+        <field name="portfolio-demo" type="text" class="input-xxlarge" default="" label="TPL_EXTRAFIELDS_PORTFOLIO_DEMO_LABEL" description="TPL_EXTRAFIELDS_PORTFOLIO_DEMO_DESC" />
     </fieldset>
 </fields>
 </form>

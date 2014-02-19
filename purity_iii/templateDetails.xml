@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>purity_III</name>
-	<version>1.0.0 Developer preview</version>
-	<creationDate>25 January 2014</creationDate>
+	<version>1.0.0</version>
+	<creationDate>17 Feb 2014</creationDate>
 	<author>JoomlArt.com</author>
 	<authorEmail>webmaster@joomlart.com</authorEmail>
 	<authorUrl>http://www.t3-framework.org</authorUrl>
@@ -21,7 +21,7 @@
 				<p> </p>
 				<span style="color:#FF0000">Note: Purity III requires T3 plugin to be installed and enabled.</span>
 				<p> </p>
-				<p>Copyright 2004 - 2013 <a href='http://www.joomlart.com/' title='Visit Joomlart.com!'>JoomlArt.com</a>.</p>
+				<p>Copyright 2004 - 2014 <a href='http://www.joomlart.com/' title='Visit Joomlart.com!'>JoomlArt.com</a>.</p>
 			</div>
 			<style>table.adminform{width: 100%;}</style>
 		</div>
@@ -39,6 +39,8 @@
 		<filename>template_thumbnail.png</filename>
 		<filename>templateDetails.xml</filename>
 		<filename>helper.php</filename>
+		<filename>offline.php</filename>
+		<filename>error.php</filename>
 		<folder>etc</folder>
 		<folder>fonts</folder>
 		<folder>html</folder>

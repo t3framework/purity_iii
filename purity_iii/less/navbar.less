@@ -60,6 +60,9 @@
   line-height: @navbar-height;
   width: @navbar-height;
   margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 
   // States
   &:hover, &:active, &:focus {
@@ -329,7 +332,10 @@
   border-radius: 0;
 
   > .container {
-    position: relative;
+    // Set ralative Position on Breakpoint
+    @media (min-width: @grid-float-breakpoint) {
+      position: relative;
+    }
   }
 
   // Navbar
@@ -344,6 +350,7 @@
   // Collapse Navbar
   // ---------------
   .t3-navbar-collapse {
+    margin-top: @navbar-height;
 
     // Hide the generated navbar on breakpoint
     @media (min-width: @grid-float-breakpoint) {

@@ -586,7 +586,7 @@ body.off-canvas-effect-14.off-canvas-right {
   transform: translate3d(100%, 0, 0) rotateY(0deg);
 }
 .old-ie .t3-off-canvas {
-  z-index: 100!important;
+  z-index: 100 !important;
   left: -250px;
 }
 html[dir="ltr"] .off-canvas-right.old-ie .t3-off-canvas {

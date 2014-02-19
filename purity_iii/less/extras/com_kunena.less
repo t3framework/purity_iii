@@ -1,295 +1,137 @@
-@brand-primary-kunena: #5388B4;
+@import "../vars.less";
 
-body #Kunena {
+// ---------------------------------------------------------
+// KUNENA COMPATIBLITY
+// ---------------------------------------------------------
 
-//GLOBAL STYLE
-//------------------------
-	a {
-		color: @blue;
+.com_kunena #Kunena {
 
-		&:hover {
-			color: lighten(@blue,15%)!important;
-			text-decoration: none!important;
-		}
-	}
+	// GENERAL ELEMENTS
+	// ---------------------------------------------------------
 
-	h2 {
-		color: @white!important;
-	}
+	// Form elements
+	// -----------------------------
+  fieldset {
+    border: 1px solid lighten(@gray-light, 15%);
 
-//BUTTON
-//--------------------------
-	input {
-		padding: 4px!important;
-		position: relative;
+    legend {
+    	margin: 0;
+    	padding: 0 (@t3-global-padding / 4);
+      width: inherit;
+    }
 
-		&[type="checkbox"] {
-			position: relative;
-			top: 2px;
-		}
-	}
+  }
 
-	.kbutton:hover {
-		background: @brand-primary-kunena!important;
-		color: @white;
-	}
+  .kbutton,
+  .kbutton:hover,
+  .kbutton-container .kbutton {
+  	font-size: @font-size-base;
+  	font-weight: 600;
+  	margin: 0;
+  	padding: (@t3-global-padding / 4) (@t3-global-padding / 2);
+  }
 
-	.fltrt {
-		margin-top: 3px;
-	}
 
-	.kheader {
-		padding: @t3-global-margin/3 @t3-global-margin/2!important;
-	}
+	// INDEX PAGE
+	// ---------------------------------------------------------
 
-	option {
-		margin-bottom: 2px;
-	}
+	// Profile block
+	// -----------------------------
+	#kprofilebox {
+		.input span {
+			display: inline-block;
+			padding: (@t3-global-padding / 2) @t3-global-padding (@t3-global-padding / 2) 0;
 
-	span.ktoggler {
-		top: -6px!important;
-	}
-
-//SELECT
-//------------------------
-	select {
-		background: @white !important;
-		display: inline;
-		padding: 3px!important;
-
-		&:hover,&:active,&:focus {
-			background: @white !important;
-			display: inline!importan;
-			padding: 3px;
-		}
-	}
-
-	#catid {
-		padding-bottom: 2px;
-		padding-top: 2px;
-		position: relative;
-		top: -1px;
-		margin-right: @t3-global-margin/4;
-	}
-
-//KWHO-TOTAL
-//------------------------
-	#kwhoisonline {
-		td.kcol-mid {
-			padding: 0px;
-
-			> div {
-				padding: 5px;
+			.inputbox {
+				display: inline-block;
 			}
 		}
+	}
 
-		.kwho-total {
-			border-bottom: 1px solid lighten(@gray-light, 15%);
-			border-top: none;
-			border-left: none;
-			border-right: none;
+
+	// Action block
+	// -----------------------------
+	.klist-actions,
+	.klist-bottom {
+		.inputbox {
+			display: inline-block;
+			padding: 4px 3px;
+		}
+
+		.kbutton {
+			display: inline-block;
+		}
+	}
+
+	.klist-bottom {
+		padding-bottom: 0 !important;
+		overflow: hidden;
+	}
+
+
+	// Block
+	// -----------------------------
+	div.kheader {
+		color: @white !important;
+		padding: (@t3-global-padding / 2) @t3-global-padding;
+
+		a {
+			color: @white !important;
+		}
+	}
+
+
+	// Who is online block
+	// -----------------------------
+	#kwhoisonline {
+
+		.kwhoonline {
+			border-width: 0;
+			border-bottom-width: 1px;
 		}
 
 		.kwholegend {
-			border-bottom: none;
-			border-top: 1px solid lighten(@gray-light, 15%);
-			border-left: none;
-			border-right: none;
-			margin-top: 0px;
-		}
-	}
-
-//KBLOCK
-//----------------------
-	div.kblock div.kheader {
-		h2 span {
-			color: @white;
-		}
-
-		.ktitle-desc {
-			color: @white;
-		}
-	}
-
-// KPBOX
-//--------------------
-	#kprofilebox {
-		.kprofilebox td.kprofileboxcnt {
-			padding: @t3-global-padding/2 8px;
-		}
-
-		.input {
-			margin-top: @t3-global-margin/2;
-
-			span {
-				margin-right: @t3-global-margin/2;
-
-				input {
-					display: inline;
-
-					&[type="checkbox"] {
-						position: relative;
-						top: 2px;
-					}
-
-					&[type="submit"] {
-						padding: 2px 4px;
-						position: relative;
-						top: 1px;
-					}
-				}
-			}
-		}
-
-		.klink-block {
-			margin-top: @t3-global-margin/4;
-
-			span {
-				margin-right: @t3-global-padding/4;
-			}
-		}
-	}
-
-//ACTIONS
-//----------------------
-	.klist-actions {
-		#sel {
-			margin-bottom: 2px;
-		}
-
-		.kright {
-			#catid {
-				display: inline;
-			}
-
-			.kbutton {
-				padding: 4px!important;
-			}
+			border-width: 0;
+			border-top-width: 1px;
 		}
 	}
 
 
-//KLIST-MARKALLCATSREAD
-//------------------------
-	.klist-markallcatsread {
-		#jumpto {
-			#catid {
-				display: inline;
-			}
+	// SEARCH PAGE
+	// ---------------------------------------------------------
+	.kadvsearch {
+		input {
+			margin-bottom: (@t3-global-margin / 2);
+		}
+
+		select {
+			background: @white !important;
+			margin-bottom: (@t3-global-margin / 2);	
+			padding: 4px 3px;
 		}
 	}
 
-//KPROFILE
-//-------------------------
-	#kprofile {
-		.tabs{
-			dt {
-				margin-right: 2px;
-				border-radius: 5px 5px 0 0;
-				font-weight: normal;
-			}
 
-			.open {
-				background: @brand-primary-kunena;
-				color: @white;
-			}
+	// PROFILE PAGE
+	// ---------------------------------------------------------
+	#kprofile-edit {
+    .tabs {
+      dt {
+        margin-right: 2px;
+        border-radius: 5px 5px 0 0;
+        font-weight: normal;
+      }
 
-			.closed {
-				background: @gray;
-				color: @white;
-			}
-		}
+      .open {
+        background: @blue;
+        color: @white;
+      }
 
-		.kbutton-container {
-			input.kbutton {
-				margin: 0px!important;
-				padding: @t3-global-margin/4!important;
-			}
-		}
-
-		.editlinktip.hasTip input {
-			display: inline;
-			margin-right: @t3-global-margin/4;
-		}
+      .closed {
+        background: @gray;
+        color: @white;
+      }
+    }
 	}
 
-	.k-profile {
-		span a.kwho-admin {
-			color: @white!important;
-
-			&:hover {
-				color: lighten(@blue,15%)!important;
-			}
-		}
-	}
-
-	#kpost-buttons input.kbutton {
-		margin: 0 0 0 5px;
-	}
-
-//KADVSEARCH
-//-------------------------
-	#advsearch tr {
-		#kusername {
-			display: inline;
-		}
-
-		fieldset {
-			border: 1px solid lighten(@gray-light, 15%);
-
-			legend {
-				width: inherit;
-			}
-
-			#mode, #childforums-lbl {
-				margin-top: @t3-global-margin/2;
-			}
-		}
-
-		#limit {
-			margin: 0px;
-			padding-top: 4px!important;
-			width: 175px;
-		}
-
-		#categorylist {
-			display: block;
-		}
-
-		#search-posts-start input[type="text"] {
-			display: inline;
-			margin-right: @t3-global-margin/4;
-		}
-	}
-
-//KTOPICS
-//---------------------------
-	#kflattable input[type="submit"],
-	#kannouncement_body input[type="submit"] {
-		top: 1px;
-	}
-
-//KLIST-BOTTOM
-//---------------------------
-	div.klist-bottom {
-		padding-bottom: 38px!important;
-	}
-
-
-// PAGINATION
-//---------------------------
-	ul.kpagination {
-		position: relative;
-		top: -2px;
-
-		a:link,a:visited {
-			padding: 1px 5px;
-		}
-
-		span {
-			background: @brand-primary-kunena;
-			color: @white;
-			padding: 1px 5px;
-		}
-	}
 }

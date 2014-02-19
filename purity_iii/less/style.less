@@ -22,42 +22,19 @@
 // Logo
 // ----
 .logo {
+  position: absolute;
+  top: 0;
+  left: 0;  
   padding: 0;
   margin: 0;
 
   a {
-    display: inline-block;
-    line-height: 1;
-    margin: 0;
-  }
-
-}
-
-
-// Logo Image
-// ----------
-.logo-image {
-  // Hide sitename and slogan
-  span, small {
-    display: none;
-  }
-}
-
-
-// Logo Text
-// ----------
-.logo-text {
-  text-transform: uppercase;
-  font-size: @font-size-large;
-  position: absolute;
-  top: 0;
-  left: 0;
-  a {
     background: transparent;
     color: #fff;
     text-decoration: none;
-    line-height: @navbar-height;
-    padding: 0 @t3-global-padding;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
   }
 
   &:hover a,
@@ -69,16 +46,11 @@
     text-decoration: none;
   }
 
-  // Taglines
-  .site-slogan {
-    display: none;
-  }
-
 }
 
 // Different Style on Tablets / Desktop
 @media screen and (min-width: @grid-float-breakpoint) {
-  .logo-text {
+  .logo {
     position: static;
     a {
       background: @navbar-default-border;
@@ -95,7 +67,6 @@
 
 
 // Logo Position when Off-Canvas enable
-// ------------------------------------
 .off-canvas-toggle + .container .navbar-header .logo {
   left: @navbar-height;
   border-left: 1px solid @navbar-default-border;
@@ -106,22 +77,59 @@
 }
 
 
+// Logo Image
+// ----------
+.logo-image {
+  > a {
+    max-width: 160px;
+    max-height: 55px;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  // Hide sitename and slogan
+  span, small {
+    display: none;
+  }
+}
+
+
+// Logo Text
+// ----------
+.logo-text {
+  text-transform: uppercase;
+  font-size: @font-size-large;
+
+  a {
+    line-height: @navbar-height;
+    padding: 0 @t3-global-padding;
+  }
+
+  &:hover a,
+  a:hover,
+  a:active,
+  a:focus {
+  }
+
+  // Taglines
+  .site-slogan {
+    display: none;
+  }
+
+}
+
+
 
 // Head Search
 // -----------
 .head-search {
-  float: right;
   height: @navbar-height;
-  position: relative;
+  position: absolute;
+  right: 0;
   margin: 0;
   z-index: 1000;
-
-  // Absolute position to right on Tablets / Desktop
-  @media screen and (min-width: @grid-float-breakpoint) {
-    position: absolute;
-    right: 20px;
-    top: 0;
-  }
 
   form {
     margin: 0;
@@ -132,7 +140,7 @@
   }
   
   .search {
-    background: transparent;
+    background: @navbar-default-bg;
     border-left: 1px solid @navbar-default-border;
     border-right: 1px solid @navbar-default-border;
     position: relative;
@@ -156,12 +164,17 @@
     border: 0;
     background: transparent;
     color: @navbar-default-color;
-    height: @navbar-height;
+    height: @navbar-height - 1;
+    line-height: @navbar-height;
     position: relative;
     margin: 0;
     padding: 0 15px 0 40px;
     width: 0;
     .transition(width .2s);
+    // Has background on Tablets / Desktop
+    @media screen and (min-width: @grid-float-breakpoint) {
+      height: @navbar-height;
+    }
     // States
     &:hover, &:active, &:focus {
       color: @navbar-default-link-hover-color;
@@ -173,6 +186,20 @@
   }
 
 // End
+}
+
+// If there is a Navbar Toggle, then replace the Search
+.navbar-toggle + .head-search {
+  right: @navbar-height;
+}
+
+// Absolute position to right on Tablets / Desktop
+@media screen and (min-width: @grid-float-breakpoint) {
+  .head-search,
+  .navbar-toggle + .head-search {
+    right: @grid-gutter-width / 2;
+    top: 0;
+  }
 }
 
 
@@ -322,6 +349,25 @@
 
   }
 
+}
+
+// Back to Top
+// -----------
+#back-to-top {
+  right: @t3-global-margin;
+  top: auto;
+
+  &.affix {
+    bottom: @t3-global-margin * 2;
+  }
+
+  a {
+    outline: none;
+  }
+
+  i {
+    font-size: @font-size-large + 10;
+  }
 }
 
 // Copyright

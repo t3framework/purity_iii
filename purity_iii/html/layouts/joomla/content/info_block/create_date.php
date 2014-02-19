@@ -13,5 +13,5 @@ $date_format = isset($displayData['date_format']) ? $displayData['date_format'] 
 ?>
 			<dd class="create" title="<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date', $displayData['item']->created, $date_format)); ?>">
         <i class="fa fa-calendar"></i>
-				<?php JHtml::_('date', $displayData['item']->created, $date_format) ?>
+				<?php echo JHtml::_('date', $displayData['item']->created, $date_format) ?>
 			</dd>

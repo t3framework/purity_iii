@@ -8,6 +8,21 @@
 defined('_JEXEC') or die;
 ?>
 
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
 <!-- FOOTER -->
 <footer id="t3-footer" class="wrap t3-footer">
 

@@ -2,8 +2,8 @@
 <form>
     <fields name="params">
         <fieldset name="page-options" label="Page Display" description="Page Display Description">
-            <field name="masshead-title" type="text" default="" label="Masshead Title" description="Masshead Title" />
-            <field name="masshead-slogan" type="textarea" default="" label="Masshead Slogan" description="Masshead Slogan" filter="RAW" />
+            <field name="masthead-title" type="text" default="" label="TPL_MENU_ITEM_MASTHEAD_TITLE_LABEL" description="TPL_MENU_ITEM_MASTHEAD_TITLE_DESC" />
+            <field name="masthead-slogan" type="textarea" default="" label="TPL_MENU_ITEM_MASTHEAD_SLOGAN_LABEL" description="TPL_MENU_ITEM_MASTHEAD_SLOGAN_DESC" filter="RAW" />
         </fieldset>
     </fields>
 </form>

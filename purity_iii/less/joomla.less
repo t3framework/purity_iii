@@ -234,7 +234,7 @@ article,
 }
 
 // Reponsive Article Images on Mobile
-@media screen and (max-width: @screen-xs-max) {
+@media screen and (max-width: @screen-md) {
   article,
   .article-intro {
     img, img[align=left], img[align=right],
@@ -261,6 +261,11 @@ article,
 .item-page .tags {
   border-top: 1px solid @gray-lighter;
   padding: (@t3-global-padding / 2) 0;
+
+  span {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 
   a {
     background: @white;
@@ -308,7 +313,12 @@ article aside .btn-group {
   // Filter bar
   .filters {
     border-bottom: 1px solid @gray-lighter;
-    padding: @t3-global-padding;
+    padding: @t3-global-padding 0;
+
+    // Larger margin on Tablet / Desktop
+    @media screen and (min-width: @screen-sm) {
+      padding: @t3-global-padding;
+    }    
   }
 
   .thumbnails {
@@ -384,6 +394,7 @@ article aside .btn-group {
   vertical-align: middle;
   border-top: 1px solid @table-border-color;
   margin-left: 0;
+  padding-left: 0;
 }
 
 .list-striped li,
@@ -778,6 +789,7 @@ article aside .btn-group {
   // Title
   .result-title {
     font-size: @t3-font-size-bigger;
+    font-weight: bold;
     margin-top: @t3-global-margin;
   }
 
@@ -791,6 +803,12 @@ article aside .btn-group {
   .result-text {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+
+  // Result URL
+  .result-url {
+    color: @gray;
+    margin-top: @line-height-computed;
   }
 
   // Date

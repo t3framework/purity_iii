@@ -1,0 +1,20 @@
+
+.com_easysocial .es-toolbar .es-navbar-search .search-query::-moz-placeholder {
+  color: #ffffff;
+}
+.com_easysocial .stream-meta {
+  margin-left: 0;
+  margin-right: 0;
+}
+.com_easysocial .stream-meta .stream-title .row-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}
+.com_easysocial .stream-meta .stream-content .row-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}
+.com_easysocial .es-stream-meta .es-stream-title .row-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}

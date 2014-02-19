@@ -1,37 +1,52 @@
 
 
 .glossary-nav {
-  margin-bottom: 60px;
   position: relative;
   z-index: 10;
-  height: 50px;
+  margin-bottom: 40px;
 }
 .glossary-nav nav {
-  padding: 0 40px 0 0;
+  padding: 0;
 }
 .glossary-nav nav.affix {
-  top: 57px;
+  top: auto;
+  position: relative;
 }
 .glossary-nav nav .nav-pills {
-  background: #444444;
+  background: #fff;
 }
 .glossary-nav nav .nav-pills > li {
-  border-right: 1px solid #fff;
-  margin: 0;
+  display: block;
+  float: left;
+  margin: 0 1px 10px 0;
 }
 .glossary-nav nav .nav-pills > li > a {
-  padding: 10px 15px;
-  font-size: 24px;
-  line-height: normal;
   background: #444444;
-  color: #fff;
+  color: #eeeeee;
+  font-size: 18px;
   font-weight: 600;
+  line-height: normal;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
   text-transform: uppercase;
 }
 .glossary-nav nav .nav-pills > li > a:hover,
 .glossary-nav nav .nav-pills > li > a:active,
 .glossary-nav nav .nav-pills > li > a:focus {
   background: #ff8800;
+  color: #fff;
+}
+@media screen and (min-width: 991px) {
+  .glossary-nav nav.affix {
+    top: 57px;
+    position: fixed;
+  }
+  .glossary-nav nav .nav-pills > li > a {
+    font-size: 24px;
+  }
 }
 .glossary-group {
   margin-bottom: 40px;
@@ -42,12 +57,12 @@
   top: -120px;
 }
 .glossary-group-title {
-  margin: 0 0 20px;
-  font-weight: 600;
-  font-size: 42px;
   background: #f7f7f7;
   color: #222222;
-  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 35px;
+  margin: 0 0 20px;
+  padding: 15px;
   text-transform: uppercase;
 }
 .glossary-group-items ul {
@@ -56,9 +71,17 @@
 }
 .glossary-group-items ul > li {
   list-style: none;
-  padding: 5px 15px;
+  padding: 0;
 }
 .glossary-group-items ul > li > a {
   color: #444444;
+  display: block;
   font-size: 18px;
+  padding: 5px 15px;
+}
+.glossary-group-items ul > li > a:hover,
+.glossary-group-items ul > li > a:active,
+.glossary-group-items ul > li > a:focus {
+  color: #ff8800;
+  text-decoration: none;
 }

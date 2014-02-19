@@ -1,0 +1,57 @@
+
+.com_community #community-wrap label input,
+.com_community #community-wrap .form-field input {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}
+.com_community #community-wrap .cGuest .row-fluid.hero-area {
+  margin-left: 0;
+  margin-right: 0;
+}
+.com_community #community-wrap .js_dropDownMaster dt,
+.com_community #community-wrap .js_dropDownParent li > a {
+  height: 28px;
+}
+.com_community #community-wrap .js-toolbar .navbar-inner {
+  min-height: 40px;
+}
+.com_community #community-wrap .js-toolbar .nav-collapse {
+  display: block;
+}
+.com_community #community-wrap .js-toolbar .nav > li > a {
+  height: 38px;
+  line-height: 25px;
+}
+.com_community #community-wrap .js-toolbar .dropdown-menu > li {
+  border: 0;
+}
+.com_community #community-wrap .cStream-Content .row-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}
+.com_community #community-wrap .cProfile-Preferences .js_dropDownMaster dt,
+.com_community #community-wrap .cProfile-Preferences .js_dropDownParent li > a {
+  height: 26px;
+  line-height: 20px;
+}
+.com_community #community-wrap .cProfile-Preferences label input {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}
+.com_community #community-wrap .cSearch .label-checkbox input {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}
+.com_community #community-wrap .advance-search label input {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}
+.com_community #community-wrap .cGroups-Create label input {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}

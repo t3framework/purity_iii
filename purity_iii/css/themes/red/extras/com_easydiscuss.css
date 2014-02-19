@@ -1,0 +1,8 @@
+
+#discuss-wrapper .nav-collapse.collapse {
+  display: block;
+}
+#discuss-wrapper .nav-collapse.collapse .modal-body .row-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -80,7 +80,7 @@ JPluginHelper::importPlugin('content');
 		<?php	if ($i == 0): /* start new row */ ?>
 			<div class="row row-articles">
 		<?php endif ?>
-		<div class="col-xs-<?php echo $col_width ?> magazine-item">
+		<div class="col-xs-12 col-sm-<?php echo $col_width ?> magazine-item">
 			<div class="row">
 
 				<div class="col-md-4 magazine-item-media">

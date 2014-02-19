@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 <fields name="attribs">
-    <fieldset name="extra-fields" label="Extra Fields" description="Extra Fields" group="extrafields">
-        <field name="extra-class" type="text" default="" label="Extra Class" description="Extra Class for the article" />
+    <fieldset name="extra-fields" label="TPL_GROUP_EXTRA_FIELDS_LABEL" description="TPL_GROUP_EXTRA_FIELDS_DESC" group="extrafields">
+        <field name="extra-class" type="text" default="" label="TPL_ARTICLE_EXTRA_CLASS_LABEL" description="TPL_ARTICLE_EXTRA_CLASS_DESC" />
     </fieldset>
 </fields>
 </form>

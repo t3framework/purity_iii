@@ -1,193 +1,73 @@
 
-body #Kunena a {
-  color: #0077bb;
+.com_kunena #Kunena fieldset {
+  border: 1px solid #bfbfbf;
 }
-body #Kunena a:hover {
-  color: #08a5ff !important;
-  text-decoration: none!important;
+.com_kunena #Kunena fieldset legend {
+  margin: 0;
+  padding: 0 5px;
+  width: inherit;
 }
-body #Kunena h2 {
+.com_kunena #Kunena .kbutton,
+.com_kunena #Kunena .kbutton:hover,
+.com_kunena #Kunena .kbutton-container .kbutton {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  padding: 5px 10px;
+}
+.com_kunena #Kunena #kprofilebox .input span {
+  display: inline-block;
+  padding: 10px 20px 10px 0;
+}
+.com_kunena #Kunena #kprofilebox .input span .inputbox {
+  display: inline-block;
+}
+.com_kunena #Kunena .klist-actions .inputbox,
+.com_kunena #Kunena .klist-bottom .inputbox {
+  display: inline-block;
+  padding: 4px 3px;
+}
+.com_kunena #Kunena .klist-actions .kbutton,
+.com_kunena #Kunena .klist-bottom .kbutton {
+  display: inline-block;
+}
+.com_kunena #Kunena .klist-bottom {
+  padding-bottom: 0 !important;
+  overflow: hidden;
+}
+.com_kunena #Kunena div.kheader {
+  color: #ffffff !important;
+  padding: 10px 20px;
+}
+.com_kunena #Kunena div.kheader a {
   color: #ffffff !important;
 }
-body #Kunena input {
-  padding: 4px!important;
-  position: relative;
+.com_kunena #Kunena #kwhoisonline .kwhoonline {
+  border-width: 0;
+  border-bottom-width: 1px;
 }
-body #Kunena input[type="checkbox"] {
-  position: relative;
-  top: 2px;
+.com_kunena #Kunena #kwhoisonline .kwholegend {
+  border-width: 0;
+  border-top-width: 1px;
 }
-body #Kunena .kbutton:hover {
-  background: #5388b4 !important;
-  color: #ffffff;
+.com_kunena #Kunena .kadvsearch input {
+  margin-bottom: 10px;
 }
-body #Kunena .fltrt {
-  margin-top: 3px;
-}
-body #Kunena .kheader {
-  padding: 6.666666666666667px 10px !important;
-}
-body #Kunena option {
-  margin-bottom: 2px;
-}
-body #Kunena span.ktoggler {
-  top: -6px !important;
-}
-body #Kunena select {
+.com_kunena #Kunena .kadvsearch select {
   background: #ffffff !important;
-  display: inline;
-  padding: 3px!important;
+  margin-bottom: 10px;
+  padding: 4px 3px;
 }
-body #Kunena select:hover,
-body #Kunena select:active,
-body #Kunena select:focus {
-  background: #ffffff !important;
-  display: inline!importan;
-  padding: 3px;
-}
-body #Kunena #catid {
-  padding-bottom: 2px;
-  padding-top: 2px;
-  position: relative;
-  top: -1px;
-  margin-right: 5px;
-}
-body #Kunena #kwhoisonline td.kcol-mid {
-  padding: 0px;
-}
-body #Kunena #kwhoisonline td.kcol-mid > div {
-  padding: 5px;
-}
-body #Kunena #kwhoisonline .kwho-total {
-  border-bottom: 1px solid #bfbfbf;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-body #Kunena #kwhoisonline .kwholegend {
-  border-bottom: none;
-  border-top: 1px solid #bfbfbf;
-  border-left: none;
-  border-right: none;
-  margin-top: 0px;
-}
-body #Kunena div.kblock div.kheader h2 span {
-  color: #ffffff;
-}
-body #Kunena div.kblock div.kheader .ktitle-desc {
-  color: #ffffff;
-}
-body #Kunena #kprofilebox .kprofilebox td.kprofileboxcnt {
-  padding: 10px 8px;
-}
-body #Kunena #kprofilebox .input {
-  margin-top: 10px;
-}
-body #Kunena #kprofilebox .input span {
-  margin-right: 10px;
-}
-body #Kunena #kprofilebox .input span input {
-  display: inline;
-}
-body #Kunena #kprofilebox .input span input[type="checkbox"] {
-  position: relative;
-  top: 2px;
-}
-body #Kunena #kprofilebox .input span input[type="submit"] {
-  padding: 2px 4px;
-  position: relative;
-  top: 1px;
-}
-body #Kunena #kprofilebox .klink-block {
-  margin-top: 5px;
-}
-body #Kunena #kprofilebox .klink-block span {
-  margin-right: 5px;
-}
-body #Kunena .klist-actions #sel {
-  margin-bottom: 2px;
-}
-body #Kunena .klist-actions .kright #catid {
-  display: inline;
-}
-body #Kunena .klist-actions .kright .kbutton {
-  padding: 4px!important;
-}
-body #Kunena .klist-markallcatsread #jumpto #catid {
-  display: inline;
-}
-body #Kunena #kprofile .tabs dt {
+.com_kunena #Kunena #kprofile-edit .tabs dt {
   margin-right: 2px;
   border-radius: 5px 5px 0 0;
   font-weight: normal;
 }
-body #Kunena #kprofile .tabs .open {
-  background: #5388b4;
+.com_kunena #Kunena #kprofile-edit .tabs .open {
+  background: #0077bb;
   color: #ffffff;
 }
-body #Kunena #kprofile .tabs .closed {
+.com_kunena #Kunena #kprofile-edit .tabs .closed {
   background: #666666;
   color: #ffffff;
-}
-body #Kunena #kprofile .kbutton-container input.kbutton {
-  margin: 0px!important;
-  padding: 5px !important;
-}
-body #Kunena #kprofile .editlinktip.hasTip input {
-  display: inline;
-  margin-right: 5px;
-}
-body #Kunena .k-profile span a.kwho-admin {
-  color: #ffffff !important;
-}
-body #Kunena .k-profile span a.kwho-admin:hover {
-  color: #08a5ff !important;
-}
-body #Kunena #kpost-buttons input.kbutton {
-  margin: 0 0 0 5px;
-}
-body #Kunena #advsearch tr #kusername {
-  display: inline;
-}
-body #Kunena #advsearch tr fieldset {
-  border: 1px solid #bfbfbf;
-}
-body #Kunena #advsearch tr fieldset legend {
-  width: inherit;
-}
-body #Kunena #advsearch tr fieldset #mode,
-body #Kunena #advsearch tr fieldset #childforums-lbl {
-  margin-top: 10px;
-}
-body #Kunena #advsearch tr #limit {
-  margin: 0px;
-  padding-top: 4px!important;
-  width: 175px;
-}
-body #Kunena #advsearch tr #categorylist {
-  display: block;
-}
-body #Kunena #advsearch tr #search-posts-start input[type="text"] {
-  display: inline;
-  margin-right: 5px;
-}
-body #Kunena #kflattable input[type="submit"],
-body #Kunena #kannouncement_body input[type="submit"] {
-  top: 1px;
-}
-body #Kunena div.klist-bottom {
-  padding-bottom: 38px!important;
-}
-body #Kunena ul.kpagination {
-  position: relative;
-  top: -2px;
-}
-body #Kunena ul.kpagination a:link,
-body #Kunena ul.kpagination a:visited {
-  padding: 1px 5px;
-}
-body #Kunena ul.kpagination span {
-  background: #5388b4;
-  color: #ffffff;
-  padding: 1px 5px;
 }

@@ -76,4 +76,4 @@ if (!$sitename) {
 </header>
 <!-- //MAIN NAVIGATION -->
 
-<?php $this->loadBlock ('masshead') ?>
+<?php $this->loadBlock ('masthead') ?>

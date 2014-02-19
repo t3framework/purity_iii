@@ -10,11 +10,11 @@
   font-size: 42px;
 }
 .example-type h1,
-.example-type h2,
-.example-type h3,
-.example-type h4,
-.example-type h5,
-.example-type h6 {
+.example-typeh2,
+.example-typeh3,
+.example-typeh4,
+.example-typeh5,
+.example-typeh6 {
   margin: 20px 0;
 }
 .example-colors .swatch-item {

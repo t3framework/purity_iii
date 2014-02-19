@@ -1,165 +1,238 @@
 
 @import "vars.less"; // Modify this for custom colors, font-sizes, etc
 
+
+// 
+// COMPATIBLE WITH MIJOSHOP
+// ---------------------------------------------------------
 .com_mijoshop {
 
-  // General
-  table.form td {
-    border-top: 0;
-  }
+  // All categories
+  // --------------
+  .box_oc {
+    .box-product {
+      margin-left: 0;
+      & > div {
+        float: left;
+        margin: 0;
+        width: 25%;
 
-  .buttons {
-    padding: (@t3-global-padding/2) @t3-global-padding;
-  }
+        .image {
+          border: 1px solid @t3-border-color;
+          margin: 0 (@t3-global-margin / 2);
+          padding: 5px;
+          text-align: center;
 
-  // Header 
-  #header_oc {
-    .links {
-      top: 35px;
-    }
+          a {
+            display: block;
+          }
 
-    #search_oc {
-      top: 5px;
-      width: 125px;
+          img {
+            border: 0;
+            padding: 0;
+          }
+        }
 
-      input {
-        height: 25px;
+        .name {
+          padding: (@t3-global-padding / 2) 0;
+          text-align: center;
+        }
       }
     }
+  }
+
+
+  // Category page ( Product list )
+  // ------------------------------
+
+  // Header
+  #header_oc {
+    margin: 0 0 @t3-global-margin;
+    padding: 0;
 
     #currency {
-      font-size: (@font-size-base + 1);
-      font-weight: bold;
-      top: 8px;
+      top: 0;
 
       a {
-        font-size: 12px;
         margin-top: 5px;
       }
     }
 
-    .mini-cart-info td,
-    .mini-cart-total td {
-      border-top: 0;
+    #cart {
+      border-left: 1px solid @t3-border-color;
+      margin-left: @t3-global-margin;
+      top: 5px;
+
+      .heading {
+        margin-top: 0;
+      }
+    }
+
+    #search_oc {
+      top: 10px;
+      width: 120px;
+
+      input[type="text"] {
+        border-radius: 0;
+        height: 25px;
+        .box-sizing(border-box);
+      }
+    }
+
+    .links {
+      bottom: 0;
+      top: auto;
     }
   }
 
-  // Product filter
-  .product-filter {
-    padding-bottom: 15px;
-
-    .limit select,
-    .sort select {
-      display: inline-block;
-      padding: 2px;
-      height: 25px;
-      line-height: 25px;
+  // Content
+  #content_oc {
+    .box-heading {
+      background: @gray-lighter;
+      border-radius: 0;
+      padding: (@t3-global-padding / 2) @t3-global-padding;
     }
 
-  }
+    .box-content {
+      border-radius: 0;
+      padding: @t3-global-padding;
+    }
 
-  // Grid
-  .product-grid {
-    .clearfix();
-    width: auto;
-    margin: 0 -(@t3-global-margin/2) -(@t3-global-margin);
+    // Product filter
+    .product-filter {
+      padding-bottom: @t3-global-padding / 2;
 
-    > div {
-      float: left;
-      width: 25%;
-      margin-right: 0;
-      margin-bottom: 20px;
+      .display {
+        padding-top: 15px;
+      }  
+    }
+
+    // Product compare
+    .product-compare {
+      padding-top: @t3-global-padding;
+      margin-bottom: @t3-global-margin;
+    }
+
+    // Product grid
+    .product-grid {
+      .clearfix();
+      width: auto;
+      margin: 0 -(@t3-global-margin/2) -(@t3-global-margin);
 
       > div {
-        margin-right: @t3-global-margin/2;
-        margin-left: @t3-global-margin/2;
-        margin-bottom: @t3-global-margin/2;
+        float: left;
+        width: 25%;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        > div {
+          margin-right: @t3-global-margin/2;
+          margin-left: @t3-global-margin/2;
+          margin-bottom: @t3-global-margin/2;
+
+          &.wishlist,
+          &.compare {
+            font-size: @t3-font-size-smaller;
+            margin-bottom: (@t3-global-margin / 4);
+          }
+        }
+
+        img {
+          max-width: 100%;
+        }
       }
 
-      img {
-        max-width: 100%;
+      > div:nth-child(4n + 1) {
+        clear: both;
       }
     }
-
-    > div:nth-child(4n + 1) {
-      clear: both;
-    }
+    
   }
 
-  .box_oc .box-content {
-    padding: @t3-global-padding;
-  }
 
-  // Product Info
+
+  // Product detail
+  // --------------
   .product-info {
-    > .left {
+    .left {
       width: 30% !important;
     }
 
-    > .right {
-      width: 70% !important;
-      border-bottom: 1px solid #E7E7E7;
-      border-right: 1px solid #E7E7E7;
+    .right {
       min-height: 352px;
-    }
+      width: 65% !important;
 
-    .description,
-    .price,
-    .cart,
-    .review {
-      padding-left: @t3-global-padding;
-      padding-right: @t3-global-padding;
-    }
-
-    .review {
-      border: 0;
-
-      div {
-        padding-left: 0;
-        padding-right: 0;
+      .description {
+        border-top: 0;
+        padding: 0 0 (@t3-global-padding / 2);
       }
 
-      .share {
-        border-bottom: 0;
-      }
-    }
+      .cart div {
+        input[type="text"],
+        input[type="button"] {
+          display: inline-block;
+        }
 
-    .cart div {
-      input[type="text"],
-      input[type="button"] {
-        display: inline-block;
+        input[type="text"] {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        span {
+          color: @gray-light;
+        }
       }
 
-      input[type="text"] {
-        padding-left: 5px;
-        padding-right: 5px;
-      }
     }
   }
 
-  .tab-content {
-    padding-left: @t3-global-padding;
-    padding-right: @t3-global-padding;
+  #tab-description,
+  #tab-review {
+    padding: @t3-global-padding;
   }
 
-  // Footer 
-  #footer_oc {
-    border: 1px solid #DBDEE1;
-    border-radius: 7px;
 
-    h3 {
-      font-weight: bold;
+  // My Account page
+  // ---------------
+  .content_oc {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+  // Checkout page
+  // -------------
+  .cart-info {
+    .quantity input[type='text'] {
+      .box-sizing(content-box);
+      height: 28px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .cart-module {
+    #coupon input,
+    #voucher input {
+      display: inline-block;
+    }
+
+    #shipping table {
+      border-bottom: 1px solid @t3-border-color;
       margin-bottom: @t3-global-margin;
-      font-size: @font-size-h4;
+    }
+
+    #shipping table td {
+      padding: (@t3-global-padding / 2) @t3-global-padding;
     }
   }
 
-  // Modules
-  .box-category {
-    padding-left: @t3-global-padding;
-  }
 
-  .box-product .image {
-    margin-bottom: @t3-global-margin/2;
-  }
+  // Mijoshop modules
+  // ----------------
+  
+
 }
