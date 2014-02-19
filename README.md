@@ -2,6 +2,7 @@ Hello world, this is Purity III
 ==========
 
 About me:
+---------------------------
 Purity III is a Responsive Joomla template for Joomla 3. A great starter theme for any Joomla lovers. A perfect starting point in any Joomla project. 
 
 Why I’m - Purity III is the best?
