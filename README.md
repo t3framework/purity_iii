@@ -1,4 +1,4 @@
-Hello world, this is Purity III and Welcome to my home
+Hello world, this is Purity III
 ==========
 
 About me:
