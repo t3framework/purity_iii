@@ -1,6 +1,6 @@
 <h1>Purity III Translations</h1>
 
-<h2>Make Purity II available in your native language</h2>
+<h2>Make Purity III available in your native language</h2>
 
 <p>Want to translate Purity III into your language? Please feel welcome to submit your translation here on Github by following those steps down below.</p>
 
